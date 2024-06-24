@@ -14,13 +14,13 @@
     border: none;
   }
   .swiper-button-prev {
-    background-image: url(/public/assets/svgs/left-arrow2.svg);
+    background-image: url(/_nuxt/assets/svgs/left-arrow2.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .swiper-button-next {
-    background-image: url(/public/assets/svgs/right-arrow2.svg);
+    background-image: url(/_nuxt/assets/svgs/right-arrow2.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -45,7 +45,7 @@
     background-color: $black-200;
   }
   .background-1 {
-    background-image: url(/public/assets/images/sustainability&recycling/commitment_1.png);
+    background-image: url(/_nuxt/assets/images/sustainability&recycling/commitment_1.png);
     background-repeat: no-repeat;
     background-position: center;
     object-position: center;
@@ -55,7 +55,7 @@
     background-size: cover;
   }
   .background-2 {
-    background-image: url(/public/assets/images/benefits/bg.png);
+    background-image: url(/_nuxt/assets/images/benefits/bg.png);
     background-repeat: no-repeat;
     background-position: center;
     object-position: center;

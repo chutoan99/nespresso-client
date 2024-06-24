@@ -5,7 +5,7 @@ export default defineComponent({
   name: "FooterComponent",
   data() {
     return {
-      currentScreenWidth: window.innerWidth,
+      currentScreenWidth: window?.innerWidth,
     };
   },
   mounted() {
@@ -16,7 +16,7 @@ export default defineComponent({
   },
   methods: {
     handleResize() {
-      this.currentScreenWidth = window.innerWidth;
+      this.currentScreenWidth = window?.innerWidth;
     },
     toggleContent(event: Event): void {
       const element = event.currentTarget;
@@ -56,11 +56,11 @@ footer#footer
       h3.payment-methods-header 100% SECURE PAYMENTS
       .payment-methods-content
         div 
-          img(alt='ic-mc' src='/assets/images/ic-mc.png' width='100%' height='100%')
+          img(alt='ic-mc' src='/_nuxt/assets/images/ic-mc.png' width='100%' height='100%')
         div
-          img(alt='ic-visa' src='/assets/images/ic-visa.png' width='100%' height='100%')
+          img(alt='ic-visa' src='/_nuxt/assets/images/ic-visa.png' width='100%' height='100%')
         div
-          img(alt='ic-ggpay' src='/assets/images/ic-ggpay.png' width='100%' height='100%')
+          img(alt='ic-ggpay' src='/_nuxt/assets/images/ic-ggpay.png' width='100%' height='100%')
   .footer_main
     .container
       .footer_main-wrapper
@@ -92,7 +92,7 @@ footer#footer
           .footer_main-content
             p Nespresso Vietnam &Acirc;N NAM FINE FOOD CO., LTD. 41 Thao Dien, Thao Dien Ward, Thu Duc City Ho Chi Minh City, Vietnam
   .footer_img
-    img(src='/assets/images/bct.png' alt='bct')
+    img(src='/_nuxt/assets/images/bct.png' alt='bct')
   .footer_language-menu
     .container
       .footer_language-menu-inner

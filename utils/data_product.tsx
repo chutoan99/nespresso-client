@@ -5,7 +5,7 @@ export const data_product = [
     label: "PROMOTE",
     price: "đ4,200,000",
     old_price: "",
-    image: "assets/images/product_index/img-product_1.png",
+    image: "/_nuxt/assets/images/product_index/img-product_1.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const data_product = [
     label: "PROMOTE",
     price: "đ1,658,000",
     old_price: "",
-    image: "assets/images/product_index/img-product_2.png",
+    image: "/_nuxt/assets/images/product_index/img-product_2.png",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const data_product = [
     label: "LIMITED",
     price: "đ15,000",
     old_price: "",
-    image: "assets/images/product_index/img-product_3.png",
+    image: "/_nuxt/assets/images/product_index/img-product_3.png",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const data_product = [
     label: "ONLINE EXCLUSIVE",
     price: "đ4,200,000",
     old_price: "đ6,300,000",
-    image: "assets/images/product_index/img-product_4.png",
+    image: "/_nuxt/assets/images/product_index/img-product_4.png",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const data_product = [
     label: "LIMITED",
     price: "đ4,200,000",
     old_price: "đ6,300,000",
-    image: "assets/images/product_index/img-product_5.png",
+    image: "/_nuxt/assets/images/product_index/img-product_5.png",
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const data_product = [
     label: "PROMOTE",
     price: "đ4,200,000",
     old_price: "",
-    image: "assets/images/product_index/img-product_6.png",
+    image: "/_nuxt/assets/images/product_index/img-product_6.png",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const data_product = [
     label: "PROMOTE",
     price: "đ4,200,000",
     old_price: "",
-    image: "assets/images/product_index/img-product_1.png",
+    image: "/_nuxt/assets/images/product_index/img-product_1.png",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const data_product = [
     label: "PROMOTE",
     price: "đ1,658,000",
     old_price: "",
-    image: "assets/images/product_index/img-product_2.png",
+    image: "/_nuxt/assets/images/product_index/img-product_2.png",
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const data_product = [
     label: "LIMITED",
     price: "đ15,000",
     old_price: "",
-    image: "assets/images/product_index/img-product_3.png",
+    image: "/_nuxt/assets/images/product_index/img-product_3.png",
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const data_product = [
     label: "ONLINE EXCLUSIVE",
     price: "đ4,200,000",
     old_price: "đ6,300,000",
-    image: "assets/images/product_index/img-product_4.png",
+    image: "/_nuxt/assets/images/product_index/img-product_4.png",
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export const data_product = [
     label: "LIMITED",
     price: "đ4,200,000",
     old_price: "đ6,300,000",
-    image: "assets/images/product_index/img-product_5.png",
+    image: "/_nuxt/assets/images/product_index/img-product_5.png",
   },
   {
     id: 12,
@@ -93,6 +93,6 @@ export const data_product = [
     label: "PROMOTE",
     price: "đ4,200,000",
     old_price: "",
-    image: "assets/images/product_index/img-product_6.png",
+    image: "/_nuxt/assets/images/product_index/img-product_6.png",
   },
 ];

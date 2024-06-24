@@ -1,8 +1,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-//? APP
-import Footer from "@/containers/Footer.vue";
-import HeaderCustom from "@/containers/HeaderCustom.vue";
+
+import Footer from "~/containers/footer.vue";
+import HeaderCustom from "~/containers/header-custom.vue";
 export default defineComponent({
   name: "ShoppingLayout",
   components: {

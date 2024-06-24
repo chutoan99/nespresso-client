@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-//? APP
-import ProductCartItem from "@/components/product_cart_item.vue";
+import ProductCartItem from "~/components/product-cart-item.vue";
 import { data_cart } from "@/utils/data_cart";
 
 export default defineComponent({
@@ -79,7 +78,7 @@ main#signUp_private
                     option
             .private_form-img
               .private_form-wrapper
-                img(src='/_nuxt/assets/images/sigup/Rectangle_7.png')
+                img(src='/_nuxt/images/sigup/Rectangle_7.png')
           .private_form-button
             button
               router-link(to='/signUp_private_step_2') Continue

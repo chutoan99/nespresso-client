@@ -6,7 +6,7 @@ export default defineComponent({
   components: {},
   data() {
     return {
-      currentScreenWidth: window.innerWidth,
+      currentScreenWidth: window?.innerWidth,
       IsCartOverlay: false,
       IsLoggedInnDropdown: false,
       IsSignInDropdown: false,
@@ -68,7 +68,7 @@ export default defineComponent({
       }
     },
     handleResize() {
-      this.currentScreenWidth = window.innerWidth;
+      this.currentScreenWidth = window?.innerWidth;
     },
   },
 });
@@ -87,13 +87,13 @@ header#header.header
             // List Item 1: Order
             li
               .img_coffee-w
-                img(alt='coffee' src='/assets/images/header/order.png')
+                img(alt='coffee' src='/_nuxt/assets/images/header/order.png')
               .menu__item-content
                 router-link.menu__item(to='') Order
             // List Item 2: Coffee
             li
               .img_coffee-w
-                img(alt='coffee' src='/assets/images/header/coffee-capsule.png')
+                img(alt='coffee' src='/_nuxt/assets/images/header/coffee-capsule.png')
               .menu__item-content
                 router-link.menu__item(to='/coffee') Coffee
                 .nav_icon
@@ -102,7 +102,7 @@ header#header.header
             // List Item 3: Machine
             li
               .img_machine-w
-                img(alt='machine' src='/assets/images/header/machine.png')
+                img(alt='machine' src='/_nuxt/assets/images/header/machine.png')
               .menu__item-content
                 router-link.menu__item(to='/machines') Machine
                 .nav_icon
@@ -111,7 +111,7 @@ header#header.header
             // List Item 4: Accessories
             li
               .img_accessories-w
-                img(alt='accessories' src='/assets/images/header/accessories.png')
+                img(alt='accessories' src='/_nuxt/assets/images/header/accessories.png')
               .menu__item-content
                 router-link.menu__item(to='/accessories') Acceessories
                 .nav_icon
@@ -120,7 +120,7 @@ header#header.header
             // List Item 5: Nespresso Benefits
             li
               .img_accessories-w
-                img(alt='accessories' src='/assets/images/header/Benefits.png')
+                img(alt='accessories' src='/_nuxt/assets/images/header/Benefits.png')
               .menu__item-content
                 router-link.menu__item(to='/benefits') Nespresso Benefits
                 .nav_icon
@@ -129,7 +129,7 @@ header#header.header
             // List Item 6: Sustainability & Recycling
             li
               .img_recycle-w
-                img(alt='recycle' src='/assets/images/header/recycle.png')
+                img(alt='recycle' src='/_nuxt/assets/images/header/recycle.png')
               .menu__item-content
                 router-link.menu__item(to='/sustainability_recycling') Sustainability &amp; Recycling
                 .nav_icon
@@ -138,7 +138,7 @@ header#header.header
             // List Item 7: Services
             li
               .img_service-w
-                img(alt='service' src='/assets/images/header/service.png')
+                img(alt='service' src='/_nuxt/assets/images/header/service.png')
               .menu__item-content
                 router-link.menu__item(to='/service') Services
                 .nav_icon
@@ -147,7 +147,7 @@ header#header.header
             // List Item 8: Store Locator
             li
               .img_location-w
-                img(alt='location' src='/assets/images/header/location.png')
+                img(alt='location' src='/_nuxt/assets/images/header/location.png')
               .menu__item-content
                 router-link.menu__item(to='/store_location') Store Locator
                 .nav_icon
@@ -156,7 +156,7 @@ header#header.header
             // List Item 9: SContact
             li
               .img_contact-w
-                img(alt='contact' src='/assets/images/header/contact.png')
+                img(alt='contact' src='/_nuxt/assets/images/header/contact.png')
               .menu__item-content
                 router-link.menu__item(to='/contact_us') Contact
                 .nav_icon
@@ -165,7 +165,7 @@ header#header.header
             // List Item 10: Professional
             li
               .img_professional-w
-                img(alt='professional' src='/assets/images/header/pro.png')
+                img(alt='professional' src='/_nuxt/assets/images/header/pro.png')
               .menu__item-content
                 router-link.menu__item(to='/professional') Professional
                 .nav_icon
@@ -193,7 +193,7 @@ header#header.header
             li
               router-link(to='')  System Quiz 
       router-link(to='/')
-        img(src='/assets/images/logoApp.png' alt='logoApp' style='width: 100%; height: 100%')
+        img(src='/_nuxt/assets/images/logoApp.png' alt='logoApp' style='width: 100%; height: 100%')
     .header_content
       div(style='position: relative')
         .search_icon2(style='width: 3.125rem; display: none' :style="{ display: isSearchMobile ? 'block' : 'none' }")
@@ -223,19 +223,19 @@ header#header.header
           .form_result-wrapper
             .form_search-item
               .form_search-item-img
-                img(src='/assets/images/Rectangle_42.png' alt='')
+                img(src='/_nuxt/assets/images/Rectangle_42.png' alt='')
               .form_search-item-info
                 span Altissio
                 span In
             .form_search-item
               .form_search-item-img
-                img(src='/assets/images/Rectangle_42.png' alt='')
+                img(src='/_nuxt/assets/images/Rectangle_42.png' alt='')
               .form_search-item-info
                 span Altissio
                 span In
             .form_search-item
               .form_search-item-img
-                img(src='/assets/images/Rectangle_42.png' alt='')
+                img(src='/_nuxt/assets/images/Rectangle_42.png' alt='')
               .form_search-item-info
                 span Altissio
                 span In
@@ -322,7 +322,7 @@ header#header.header
                 .modalCart_body-item
                   .modalCart_body-content
                     .modalCart_body-content-img
-                      img(src='/assets/images/item_cart.png' alt='item_cart.png')
+                      img(src='/_nuxt/assets/images/item_cart.png' alt='item_cart.png')
                     .modalCart_body-content-info
                       h4 Roma
                       span

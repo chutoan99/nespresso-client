@@ -1,9 +1,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-//? APP
-import Header from "@/containers/Header.vue";
-import NavigationComponent from "@/containers/Nav.vue";
-import Footer from "@/containers/Footer.vue";
+import Header from "@/containers/header.vue";
+import NavigationComponent from "@/containers/nav.vue";
+import Footer from "@/containers/footer.vue";
 
 export default defineComponent({
   name: "DefaultLayout",

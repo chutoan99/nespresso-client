@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-//? APP
-import HeaderSimple from "@/containers/HeaderSimple.vue";
+import HeaderSimple from "~/containers/header-simple.vue";
 
 export default defineComponent({
   name: "EmailLayout",
