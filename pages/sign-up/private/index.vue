@@ -1,8 +1,10 @@
 <script lang="ts" setup>
-import ProductCartItem from "~/components/product/cart.vue";
+import ProductCartItem from "@/components/product/cart.vue";
 import { data_cart } from "@/utils/data_cart";
-import { defineComponent, ref } from 'vue';
-
+import { defineComponent, onMounted, ref } from "vue";
+definePageMeta({
+  layout: 'sign-up'
+});
 defineComponent({
   name: "SignUpPrivatePage",
   components: { ProductCartItem },

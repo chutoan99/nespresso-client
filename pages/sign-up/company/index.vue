@@ -1,6 +1,8 @@
 <script lang="ts" setup>
-import { defineComponent } from "vue";
-
+import { defineComponent, onMounted, ref } from "vue";
+definePageMeta({
+  layout: 'sign-up'
+});
 defineComponent({
   name: "signUpCompanyPage",
 });
