@@ -180,6 +180,7 @@ export const data_barista = [
 
 export const data_espresso = [
   {
+    id: 1,
     name: "Volluto Decaffeinato",
     image: "/_nuxt/assets/images/product/espresso_1.png",
     alt: "Volluto Decaffeinato",
@@ -200,6 +201,7 @@ export const data_espresso = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 2,
     name: "Volluto",
     image: "/_nuxt/assets/images/product/espresso_2.png",
     alt: "Volluto",
@@ -220,6 +222,7 @@ export const data_espresso = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 3,
     name: "Cosi",
     image: "/_nuxt/assets/images/product/espresso_3.png",
     alt: "Cosi",
@@ -240,6 +243,7 @@ export const data_espresso = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 4,
     name: "Capriccio",
     image: "/_nuxt/assets/images/product/espresso_4.png",
     alt: "Capriccio",
@@ -263,6 +267,7 @@ export const data_espresso = [
 
 export const data_world = [
   {
+    id: 1,
     image: "/_nuxt/assets/images/product/espresso_1.png",
     name: "Volluto Decaffeinato",
     sleeve: "Sweet and Light",
@@ -282,6 +287,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 2,
     image: "/_nuxt/assets/images/product/espresso_2.png",
     name: "Volluto",
     sleeve: "Sweet and Light",
@@ -301,6 +307,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 3,
     image: "/_nuxt/assets/images/product/espresso_3.png",
     name: "Cosi",
     sleeve: "Mild and Delicately Toasted",
@@ -320,6 +327,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 4,
     image: "/_nuxt/assets/images/product/espresso_4.png",
     name: "Capriccio",
     sleeve: "Rich and Distinctive",
@@ -339,6 +347,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 5,
     image: "/_nuxt/assets/images/product/world_1.png",
     name: "Shanghai Lungo",
     sleeve: "Fruity with Fine Acidity",
@@ -358,6 +367,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 6,
     image: "/_nuxt/assets/images/product/world_2.png",
     name: "Buenos Aires Lungo",
     sleeve: "Sweet and Cereal",
@@ -377,6 +387,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 7,
     image: "/_nuxt/assets/images/product/world_3.png",
     name: "Tokyo Lungo",
     sleeve: "Flowery and Complex",
@@ -396,6 +407,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 8,
     image: "/_nuxt/assets/images/product/world_4.png",
     name: "Vienna Lungo",
     sleeve: "Round and Smooth",
@@ -415,6 +427,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 9,
     image: "/_nuxt/assets/images/product/world_5.png",
     name: "Stockholm Lungo",
     sleeve: "Rich and Full-Bodied",
@@ -434,6 +447,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 10,
     image: "/_nuxt/assets/images/product/world_6.png",
     name: "Cape Town Lungo",
     sleeve: "Intense and Roasted",
@@ -453,6 +467,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 11,
     image: "/_nuxt/assets/images/product/world_7.png",
     name: "Rio De Janeiro Espresso",
     sleeve: "Herbal & Spicy",
@@ -472,6 +487,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 12,
     image: "/_nuxt/assets/images/product/world_8.png",
     name: "Istanbul Espresso",
     sleeve: "Roasted & Fruity",
@@ -491,6 +507,7 @@ export const data_world = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 13,
     image: "/_nuxt/assets/images/product/world_9.png",
     name: "Paris Espresso",
     sleeve: "Mild & Balanced",
@@ -513,6 +530,7 @@ export const data_world = [
 
 export const data_master = [
   {
+    id: 1,
     image: "/_nuxt/assets/images/product/master_1.png",
     name: "Ispirazione Napoli",
     sleeve: "Sweet and Harmonious",
@@ -532,6 +550,7 @@ export const data_master = [
     price: "₫19,900",
   },
   {
+    id: 2,
     image: "/_nuxt/assets/images/product/master_2.png",
     name: "Ispirazione Napoli",
     sleeve: "Intense and Spicy",
@@ -551,6 +570,7 @@ export const data_master = [
     price: "₫19,900",
   },
   {
+    id: 3,
     image: "/_nuxt/assets/images/product/master_3.png",
     name: "Ispirazione Napoli",
     sleeve: "Rich and Woody",
@@ -570,6 +590,7 @@ export const data_master = [
     price: "₫19,900",
   },
   {
+    id: 4,
     image: "/_nuxt/assets/images/product/master_4.png",
     name: "Ispirazione Napoli",
     sleeve: "Flowery and Bright",
@@ -589,6 +610,7 @@ export const data_master = [
     price: "₫19,900",
   },
   {
+    id: 5,
     image: "/_nuxt/assets/images/product/master_5.png",
     name: "Ispirazione Napoli",
     sleeve: "Fruity and Vibrant",
@@ -611,6 +633,7 @@ export const data_master = [
 
 export const data_discovery = [
   {
+    id: 1,
     image: "/_nuxt/assets/images/product/discovery.png",
     name: "Welcome Offer Coffee Pack",
     sleeve: "10-sleeve assortment",
@@ -633,6 +656,7 @@ export const data_discovery = [
 
 export const data_ispirazione = [
   {
+    id: 1,
     tag: "LIMITED",
     image: "/_nuxt/assets/images/product/product_1.png",
     name: "Ispirazione Italiana Selection",
@@ -653,6 +677,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 2,
     tag: "LIMITED",
     image: "/_nuxt/assets/images/product/product_2.png",
     name: "Ispirazione Italiana Intense Selection",
@@ -673,6 +698,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 3,
     image: "/_nuxt/assets/images/product/product_3.png",
     name: "Roma",
     sleeve: "Full and Balanced",
@@ -692,6 +718,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 4,
     image: "/_nuxt/assets/images/product/product_4.png",
     name: "Livanto",
     sleeve: "Round and Balanced",
@@ -711,6 +738,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 5,
     image: "/_nuxt/assets/images/product/product_5.png",
     name: "Arpeggio",
     sleeve: "Intense and Cream",
@@ -730,6 +758,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 6,
     image: "/_nuxt/assets/images/product/product_6.png",
     name: "Arpeggio Decaffeinato",
     sleeve: "Intense and Cream",
@@ -749,6 +778,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 7,
     image: "/_nuxt/assets/images/product/product_7.png",
     name: "Kazzar",
     sleeve: "Intense and Syrupy",
@@ -768,6 +798,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 8,
     image: "/_nuxt/assets/images/product/product_8.png",
     name: "Napoli",
     sleeve: "Dark and Creamy",
@@ -787,6 +818,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 9,
     image: "/_nuxt/assets/images/product/product_9.png",
     name: "Ristretto",
     sleeve: "Powerful and Contrasting",
@@ -806,6 +838,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 10,
     image: "/_nuxt/assets/images/product/product_10.png",
     name: "Ristretto Decaffeinato",
     sleeve: "Powerful and Contrasting",
@@ -825,6 +858,7 @@ export const data_ispirazione = [
     capsulePrice: "Capsule price: 2,20 RON",
   },
   {
+    id: 11,
     image: "/_nuxt/assets/images/product/product_11.png",
     name: "Venezia",
     sleeve: "Balanced and Thick Body",

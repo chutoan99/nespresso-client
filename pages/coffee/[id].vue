@@ -6,10 +6,10 @@ export default defineComponent({
   data() {
     return {
       images: [
-        { src: "/_nuxt/assets/images/product_detail/product-detail-2.png", alt: "" },
-        { src: "/_nuxt/assets/images/product_detail/product-detail-2.png", alt: "" },
-        { src: "/_nuxt/assets/images/product_detail/product-detail-2.png", alt: "" },
-        { src: "/_nuxt/assets/images/product_detail/product-detail-2.png", alt: "" },
+        "/_nuxt/assets/images/product_detail/product-detail-2.png", 
+        "/_nuxt/assets/images/product_detail/product-detail-2.png", 
+        "/_nuxt/assets/images/product_detail/product-detail-2.png", 
+        "/_nuxt/assets/images/product_detail/product-detail-2.png"
       ],
       activeIndex: 0,
     };
@@ -34,7 +34,7 @@ main#coffee-detail
             img(src='/_nuxt/assets/images/product_detail/product_detail-1.png' alt='ISPIRAZIONE NAPOLI')
           .product-slide
             div(v-for='(image, index) in images' :key='index' :class="['product-slide__image', { active: index === activeIndex }]" @click='handleImageClick(index)')
-              img(:src='image.src' :alt='image.alt')
+              img(:src='image' :alt=' ')
         .product-wrapper
           .product-card
             .product-card__heading

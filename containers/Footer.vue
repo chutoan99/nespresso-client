@@ -1,6 +1,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
+defineProps<{ data: any }>();
+
+
 export default defineComponent({
   name: "FooterComponent",
   data() {
@@ -109,19 +112,19 @@ footer#footer
         .footer_language-menu-right
           ul.language-menu-list
             li.language-menu-item
-              router-link.language-menu-item-link(to='/about_us') ABOUT
+              router-link.language-menu-item-link(to='/about-us') ABOUT
             li.language-menu-item
               router-link.language-menu-item-link(to='') LEGAL
             li.language-menu-item
-              router-link.language-menu-item-link(to='/condition_of_sale') CONDITION OF SALE
+              router-link.language-menu-item-link(to='/condition-of-sale') CONDITION OF SALE
             li.language-menu-item
-              router-link.language-menu-item-link(to='/contact_us') CONTACT US
+              router-link.language-menu-item-link(to='/contact-us') CONTACT US
             li.language-menu-item
               router-link.language-menu-item-link(to='/professional') PROFESSIONAL
             li.language-menu-item
               router-link.language-menu-item-link(to='/faq') FAQ
             li.language-menu-item
-              router-link.language-menu-item-link(to='/privacy_policy') PRIVACY POLICY
+              router-link.language-menu-item-link(to='/privacy-policy') PRIVACY POLICY
   .footer_bottom
     .container
       .footer_bottom-inner

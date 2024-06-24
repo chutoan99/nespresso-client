@@ -60,7 +60,7 @@ main#signUp_start
           span.signUp-footer__detail
             | By clicking the &quot;CONTINUE&quot; button, I declare I have read and I
             | agree with the
-            router-link(to='/privacy_policy') Nespresso Privacy policy
+            router-link(to='/privacy-policy') Nespresso Privacy policy
             | .
           button.signUp-footer__btn
             router-link(to='/signUp_private_1')  Continue 

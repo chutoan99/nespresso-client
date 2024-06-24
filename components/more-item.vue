@@ -1,10 +1,11 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({
+<script lang="ts" setup>
+
+defineComponent({
   name: "MoreItem",
-  components: {},
-  props: ["data"],
 });
+
+defineProps<{ data: any }>();
+
 </script>
 
 <template lang="pug">

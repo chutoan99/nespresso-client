@@ -78,7 +78,7 @@ main#signUp_private
                     option
             .private_form-img
               .private_form-wrapper
-                img(src='/_nuxt/images/sigup/Rectangle_7.png')
+                img(src='/_nuxt/assets/images/sigup/Rectangle_7.png')
           .private_form-button
             button
               router-link(to='/signUp_private_step_2') Continue

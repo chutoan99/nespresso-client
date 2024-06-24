@@ -168,7 +168,7 @@ main#machines-detail
             <button>
             <svg
             class="closed"
-            xmlns="http://www.w3.org/2000/svg"
+            
             width="18"
             height="18"
             fill="currentColor"

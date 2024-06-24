@@ -1,27 +1,29 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({
+<script setup lang="ts">
+
+defineComponent({
   name: "ProductCoffeeItem",
-  components: {},
-  props: ["data"],
 });
+
+defineProps<{ data: any }>();
+
 </script>
 
+
 <template lang="pug">
-.product-item(v-for="product in data", :key="product.id")
-  .product-tag(v-if="product.tag")
+.product-item(v-for="product in data", :key="product?.id")
+  .product-tag(v-if="product?.tag")
     span.product-tag__name {{ product?.tag }}
   .product-image
-    router-link(:to="'./coffee_detail?id=' + product.id")
-      img(:src="product.image" :alt="product.alt")
+    router-link(:to="`/coffee/${product?.id}`")
+      img(:src="product?.image" :alt="product?.alt")
   .product-content
     .product-desc
       h6.product-name {{ product?.name }}
       .product-type__sleeve.
         {{ product?.sleeve }}
       .product-type__size
-        .product-type__size-icon(v-for="size in product.sizes", :key="size.id")
-          img(:src="size.image", alt)
+        .product-type__size-icon(v-for="size in product?.sizes", :key="size?.id")
+          img(:src="size?.image", alt)
           span {{ size?.size }}
       .product-type__intensity
         span Intensity
