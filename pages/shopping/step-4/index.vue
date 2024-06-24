@@ -1,6 +1,10 @@
 <script lang="ts" setup> 
 import { defineComponent } from "vue";
 
+definePageMeta({
+  layout: 'shopping'
+});
+
 defineComponent({
   name: "ShoppingStep4",
 });
@@ -53,7 +57,7 @@ section#shopping_step_4
                   label(for)
                   input(type="radio", checked)
                 .order_aside-left-img
-                  img(src="/images/shopping_bag/payment.png", alt)
+                  img(src="/_nuxt/assets/images/shopping_bag/payment.png", alt)
               .order_aside-right-heading
                 h3 Online payment, by card
           //  Payment on Delivery 
@@ -77,7 +81,7 @@ section#shopping_step_4
                               </div>
                               <div class="order_aside-left-img">
                                 <img
-                                  src="/images/shopping_bag/delivery.png"
+                                  src="/_nuxt/assets/images/shopping_bag/delivery.png"
                                   alt=""
                                 />
                               </div>
@@ -177,7 +181,7 @@ section#shopping_step_4
             .order_content-body-item
               .item_info
                 .item_info-img
-                  img(alt="item", src="/images/shopping_bag/item.png")
+                  img(alt="item", src="/_nuxt/assets/images/shopping_bag/item.png")
                 span.item_info-name Roma
               span.item_price 15,500đ
               .item_quantity

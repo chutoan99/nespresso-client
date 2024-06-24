@@ -23,7 +23,7 @@ section#circularity.circularity
       | values, this ambition continues to grow. From precision consumption to
       | refurbished coffee machines.
     .circularity_frame1-img
-      img(alt='' src='/_nuxt/assets//images/sustainability&recycling/circularity_3.png' height='100%')
+      img(alt='' src='/_nuxt/assets/images/sustainability&recycling/circularity_3.png' height='100%')
   .circularity_frame6.container
     h3.circularity_frame6-heading ALL IN FOR RECYCLING
     p.circularity_frame6-des

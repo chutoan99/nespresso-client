@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+definePageMeta({
+  layout: 'setting'
+});
+
 defineComponent({
   name: "SettingAddress",
 });

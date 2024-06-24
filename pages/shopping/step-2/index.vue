@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
 
+definePageMeta({
+  layout: 'shopping'
+});
+
 defineComponent({
   name: "ShoppingStep2",
 });
@@ -115,7 +119,7 @@ section#shopping_step_2
                   path(fill-rule='evenodd' clip-rule='evenodd' d='M0.162718 0.162718C0.379676 -0.0542395 0.731435 -0.0542395 0.948393 0.162718L6.50395 5.71827C6.72091 5.93523 6.72091 6.28699 6.50395 6.50395L0.948393 12.0595C0.731435 12.2765 0.379676 12.2765 0.162718 12.0595C-0.0542395 11.8425 -0.0542395 11.4908 0.162718 11.2738L5.32544 6.11111L0.162718 0.948393C-0.0542395 0.731435 -0.0542395 0.379676 0.162718 0.162718Z' fill='white')
         .delivery_content
           .delivery_content-img
-            img(alt='' src='/images/shopping_bag/image_45.png')
+            img(alt='' src='/_nuxt/assets/images/shopping_bag/image_45.png')
           .delivery_content-body
             .delivery_content-body-heading
               h3 ORDER DETAILS

@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
 
+definePageMeta({
+  layout: 'shopping'
+});
+
 defineComponent({
   name: "ShoppingStep5",
 });

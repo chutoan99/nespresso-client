@@ -3,6 +3,10 @@ import { data_comment } from "~/utils/data_comment";
 import ProductCommentItem from "~/components/product/comment.vue";
 import { defineComponent } from "vue";
 
+definePageMeta({
+  layout: 'shopping'
+});
+
 defineComponent({
   name: "ShoppingStep1",
   components: { ProductCommentItem },
@@ -36,7 +40,7 @@ section#shopping_step_1
             .shopping_content-body-item
               .item_info
                 .item_info-img
-                  img(alt='item' src='/images/shopping_bag/item.png')
+                  img(alt='item' src='/_nuxt/assets/images/shopping_bag/item.png')
                 span.item_info-name Roma
               span.item_price 15,500&dstrok;
               .item_quantity

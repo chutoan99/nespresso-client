@@ -1,5 +1,9 @@
 <script lang="ts" setup> 
 import { defineComponent } from "vue";
+definePageMeta({
+  layout: 'setting'
+});
+
 defineComponent({
   name: "SettingInfo",
 });
