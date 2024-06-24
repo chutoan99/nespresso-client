@@ -1,7 +1,7 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
 
-import ProductAccessoriesItem from "~/components/product-accessories-item.vue";
+import ProductAccessoriesItem from "~/components/product/accessories.vue";
 import {
   data_Limited,
   data_New_Arrival,
@@ -17,35 +17,29 @@ import {
   data_View_Collection_1,
   data_View_Collection_2,
 } from "@/utils/data_accessories";
-export default defineComponent({
+defineComponent({
   name: "AccessoriesPage",
   components: {
     ProductAccessoriesItem,
   },
-  data() {
-    return {
-      isExpanded: false,
-      dataLimited: data_Limited,
-      dataNewArrival: data_New_Arrival,
-      dataMilkFrothers: data_Milk_Frothers,
-      dataLumeCollection: data_Lume_Collection,
-      dataRevealCollection: data_Reveal_Collection,
-      dataMaintenance: data_Maintenance,
-      dataNudeCollection: data_Nude_Collection,
-      dataPixieCollection: data_Pixie_Collection,
-      dataDisplayCollection: data_Display_Collection,
-      dataIceTray1: data_IceTray_1,
-      dataIceTray2: data_IceTray_2,
-      dataViewCollection1: data_View_Collection_1,
-      dataViewCollection2: data_View_Collection_2,
-    };
-  },
-  methods: {
-    toggleModal() {
-      this.isExpanded = !this.isExpanded;
-    },
-  },
 });
+const isExpanded = ref(false);
+const dataLimited = ref(data_Limited);
+const dataNewArrival = ref(data_New_Arrival);
+const dataMilkFrothers = ref(data_Milk_Frothers);
+const dataLumeCollection = ref(data_Lume_Collection);
+const dataRevealCollection = ref(data_Reveal_Collection);
+const dataMaintenance = ref(data_Maintenance);
+const dataNudeCollection = ref(data_Nude_Collection);
+const dataPixieCollection = ref(data_Pixie_Collection);
+const dataDisplayCollection = ref(data_Display_Collection);
+const dataIceTray1 = ref(data_IceTray_1);
+const dataIceTray2 = ref(data_IceTray_2);
+const dataViewCollection1 = ref(data_View_Collection_1);
+const dataViewCollection2 = ref(data_View_Collection_2);
+const toggleModal = () => {
+  isExpanded.value = !isExpanded.value;
+};
 </script>
 
 <template lang="pug">

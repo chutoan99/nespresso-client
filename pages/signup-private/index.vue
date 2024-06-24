@@ -1,28 +1,30 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-import ProductCartItem from "~/components/product-cart-item.vue";
+<script lang="ts" setup>
+import ProductCartItem from "~/components/product/cart.vue";
 import { data_cart } from "@/utils/data_cart";
+import { defineComponent, ref } from 'vue';
 
-export default defineComponent({
+defineComponent({
   name: "SignUpPrivatePage",
   components: { ProductCartItem },
-  data() {
-    return {
-      privateOption: "",
-      dataCart: data_cart,
-    };
-  },
-  methods: {
-    onNoClicked() {
-      this.privateOption = "no";
-      (this.$refs.inputYes as HTMLInputElement).checked = false;
-    },
-    onYesClicked() {
-      this.privateOption = "yes";
-      (this.$refs.inputNo as HTMLInputElement).checked = false;
-    },
-  },
-});
+})
+const privateOption = ref<string>('');
+const inputYesRef = ref<HTMLInputElement | null>(null);
+const inputNoRef = ref<HTMLInputElement | null>(null);
+const dataCart = ref<any>(data_cart); 
+
+const onNoClicked = () => {
+  privateOption.value = 'no';
+  if (inputYesRef.value) {
+    inputYesRef.value.checked = false;
+  }
+};
+
+const onYesClicked = () => {
+  privateOption.value = 'yes';
+  if (inputNoRef.value) {
+    inputNoRef.value.checked = false;
+  }
+};
 </script>
 
 <template lang="pug">
@@ -45,11 +47,11 @@ main#signUp_private
           .private_form-label2
             span STEP 1/3 SELECT YOUR RANGE
           #card-list.card-list
-            productcartitem(v-bind:data='dataCart')
+            ProductCartItem(v-bind:data='dataCart')
           .private_form-label2
             span STEP 2/3 SELECT YOUR MACHINE COLOR
           .card-list
-            productcartitem(v-bind:data='dataCart')
+            ProductCartItem(v-bind:data='dataCart')
           .private_form-label2
             span STEP 3/3 ENTER YOUR MACHINE INFORMATION
           .private_form-footer(style='background-color: white')

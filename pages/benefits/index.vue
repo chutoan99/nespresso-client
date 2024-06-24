@@ -1,6 +1,7 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
+import { defineComponent, ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import SwiperCore from "swiper/core";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,37 +14,49 @@ import {
   Autoplay,
 } from "swiper/modules";
 
-export default defineComponent({
+defineComponent({
   name: "BenefitsPage",
   components: {
     Swiper,
     SwiperSlide,
   },
-  setup() {
-    const onSwiper = (swiper: any) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
-    return {
-      onSwiper,
-      onSlideChange,
-      modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
-    };
-  },
+});
 
-  methods: {
-    getSlidesBanner() {
-      if (window?.innerWidth >= 1024) {
-        return 8;
-      } else if (window?.innerWidth >= 480) {
-        return 6;
-      } else {
-        return 3;
-      }
-    },
-  },
+const swiperModules = [Navigation, Pagination, Scrollbar, A11y, Autoplay];
+
+const onSwiper = (swiper: SwiperCore) => {
+  console.log("Swiper instance:", swiper);
+};
+
+const onSlideChange = () => {
+  console.log("Slide changed");
+};
+
+const getSlidesBanner = () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= 1024) {
+    return 8;
+  } else if (screenWidth >= 480) {
+    return 6;
+  } else {
+    return 3;
+  }
+};
+
+// Reactive data using ref
+const swiperOptions = ref({
+  modules: swiperModules,
+  slidesPerView: getSlidesBanner(),
+  spaceBetween: 30,
+  navigation: true,
+  pagination: { clickable: true },
+  scrollbar: { draggable: true },
+  autoplay: { delay: 2500, disableOnInteraction: false },
+});
+
+// Watch for window resize to adjust slides
+window.addEventListener("resize", () => {
+  swiperOptions.value.slidesPerView = getSlidesBanner();
 });
 </script>
 

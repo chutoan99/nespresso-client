@@ -1,9 +1,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-
-export default defineComponent({
+defineComponent({
   name: "VerificationPage",
 });
+
 </script>
 
 <template lang="pug">

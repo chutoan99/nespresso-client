@@ -1,7 +1,6 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
-
-export default defineComponent({
+defineComponent({
   name: "MachinesComparePage",
 });
 </script>

@@ -1,9 +1,11 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
-import HeaderCustom from "../containers/header-custom.vue";
-export default defineComponent({
-  name: "SignUpLayout",
-  components: { HeaderCustom },
+import HeaderCustom from "~/components/shared/header/header-custom.vue";
+
+defineComponent({
+  components: {
+    HeaderCustom,
+  },
 });
 </script>
 

@@ -1,101 +1,97 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
 
-export default defineComponent({
+defineComponent({
   name: "MachinesDetailPage",
-  data() {
-    return {
-      firstUseItems: [
-        { id: 1, label: "FIRST USE", isActive: true },
-        { id: 2, label: "DESCALING", isActive: false },
-        { id: 3, label: "COFFEE SIZES", isActive: false },
-        { id: 4, label: "CLEANING", isActive: false },
-      ],
-      methodItems: [
-        { id: 1, label: "PAYMENT METHOD", isActive: true },
-        { id: 2, label: "DELIVERY METHOD", isActive: false },
-        { id: 3, label: "RETURN POLICY", isActive: false },
-      ],
-      imageItems: [
-        {
-          id: 1,
-          src: "/_nuxt/assets/images/machines-detail/detail-1.png",
-          alt: "",
-          isActive: true,
-        },
-        {
-          id: 2,
-          src: "/_nuxt/assets/images/machines-detail/detail-2.png",
-          alt: "",
-          isActive: false,
-        },
-        {
-          id: 3,
-          src: "/_nuxt/assets/images/machines-detail/detail-3.png",
-          alt: "",
-          isActive: false,
-        },
-        {
-          id: 4,
-          src: "/_nuxt/assets/images/machines-detail/detail-4.png",
-          alt: "",
-          isActive: false,
-        },
-      ],
-
-      dataFaqs: [
-        {
-          question: "What does 19 bars mean?",
-          answer:
-            "All the Nespresso machines are equipped with a 19-bar pressure pump, which provides the power needed to pierce the film of the capsule and release the coffee's 900 or so different aromas. The shape of the Nespresso capsule has been specially designed to ensure that the pressurized water flows evenly through the ground coffee during extraction. The temperature and flow time are also set to ensure that each precious aroma is expressed.",
-        },
-        {
-          question: "How do I take care of my machine?",
-          answer:
-            "For your machine to stay as clean and flowing as on the first day, it’s best to descale it regularly. You can check how to do that by watching the “how to descale” video on YouTube. First of all, your machine should be descaled at least once a year if you use soft water. Note: for hard water, it’s best to descale twice a year. (If you don't know what type of water you have, check the water tank - hard water tends to leave white marks). Order your descaling kit. Eject your capsules after each use. Change the water tank regularly, and refill it with fresh drinking water. Empty and clean the capsule container and drip tray on a regular basis. For integrated milk devices, activate the cleaning procedure after each use. Before your first coffee, brew water without a capsule by pressing any coffee button. When you do this, you pre-heat your coffee cup while rinsing the extraction system for a better coffee experience.",
-        },
-        {
-          question:
-            "What does the blinking/no light on my Inissia machine mean?",
-          answer:
-            "If both buttons blink fast and simultaneously, the machine might be in descaling mode. To exit descaling mode, press both buttons for 3 seconds. The machine should stop blinking. If there is no light, it means that the machine had switched itself OFF automatically after 9 min. This time can be changed to 30 min. Procedure: Switch the machine OFF. Press the Espresso button for 3 seconds. The Espresso button will blink to indicate the current setting (once for 9 mins, twice for 30 mins). Press the Espresso button one time for Auto Off mode after 30 min., one more time for Auto Off mode after 9 min. Finally, to exit press the Lungo button for 3 seconds. If there is irregular blinking, please contact our Customer Service.",
-        },
-        {
-          question:
-            "My machine has little or no coffee flow. What should I do?",
-          answer:
-            "If there is no coffee flow, please check that: The main supply cord is not trapped between the water tank and the machine. The water tank is sufficiently full and correctly positioned. Your machine is turned ON (lights ON). If there is low coffee flow, it means you need to descale your machine.",
-        },
-        {
-          question:
-            "My capsules are not puncturing/my machine may have an air bubble",
-          answer:
-            "Sometimes, your machine can have an air bubble. Air bubbles can block the flow of water through the spout. Air bubbles happen when you run the machine without water in the tank of if you haven’t used your machine in a while. To fix the problem, fill the water tank, eject any capsule that may be in the chamber, close the coffee lever and press the large cup button. That should get water to flow from the coffee outlet.",
-        },
-      ],
-    };
-  },
-  methods: {
-    activateFirstUseItem(item: any) {
-      this.firstUseItems.forEach((i) => {
-        i.isActive = false;
-      });
-      item.isActive = true;
-    },
-    activateMethodItem(item: any) {
-      this.methodItems.forEach((i) => {
-        i.isActive = false;
-      });
-      item.isActive = true;
-    },
-    activateImageItem(item: any) {
-      this.imageItems.forEach((i) => {
-        i.isActive = false;
-      });
-      item.isActive = true;
-    },
-  },
 });
+
+const firstUseItems = ref([
+  { id: 1, label: "FIRST USE", isActive: true },
+  { id: 2, label: "DESCALING", isActive: false },
+  { id: 3, label: "COFFEE SIZES", isActive: false },
+  { id: 4, label: "CLEANING", isActive: false },
+]);
+const methodItems = ref([
+  { id: 1, label: "PAYMENT METHOD", isActive: true },
+  { id: 2, label: "DELIVERY METHOD", isActive: false },
+  { id: 3, label: "RETURN POLICY", isActive: false },
+]);
+const imageItems = ref([
+  {
+    id: 1,
+    src: "/_nuxt/assets/images/machines-detail/detail-1.png",
+    alt: "",
+    isActive: true,
+  },
+  {
+    id: 2,
+    src: "/_nuxt/assets/images/machines-detail/detail-2.png",
+    alt: "",
+    isActive: false,
+  },
+  {
+    id: 3,
+    src: "/_nuxt/assets/images/machines-detail/detail-3.png",
+    alt: "",
+    isActive: false,
+  },
+  {
+    id: 4,
+    src: "/_nuxt/assets/images/machines-detail/detail-4.png",
+    alt: "",
+    isActive: false,
+  },
+]);
+
+const dataFaqs = ref([
+  {
+    question: "What does 19 bars mean?",
+    answer:
+      "All the Nespresso machines are equipped with a 19-bar pressure pump, which provides the power needed to pierce the film of the capsule and release the coffee's 900 or so different aromas. The shape of the Nespresso capsule has been specially designed to ensure that the pressurized water flows evenly through the ground coffee during extraction. The temperature and flow time are also set to ensure that each precious aroma is expressed.",
+  },
+  {
+    question: "How do I take care of my machine?",
+    answer:
+      "For your machine to stay as clean and flowing as on the first day, it’s best to descale it regularly. You can check how to do that by watching the “how to descale” video on YouTube. First of all, your machine should be descaled at least once a year if you use soft water. Note: for hard water, it’s best to descale twice a year. (If you don't know what type of water you have, check the water tank - hard water tends to leave white marks). Order your descaling kit. Eject your capsules after each use. Change the water tank regularly, and refill it with fresh drinking water. Empty and clean the capsule container and drip tray on a regular basis. For integrated milk devices, activate the cleaning procedure after each use. Before your first coffee, brew water without a capsule by pressing any coffee button. When you do this, you pre-heat your coffee cup while rinsing the extraction system for a better coffee experience.",
+  },
+  {
+    question: "What does the blinking/no light on my Inissia machine mean?",
+    answer:
+      "If both buttons blink fast and simultaneously, the machine might be in descaling mode. To exit descaling mode, press both buttons for 3 seconds. The machine should stop blinking. If there is no light, it means that the machine had switched itself OFF automatically after 9 min. This time can be changed to 30 min. Procedure: Switch the machine OFF. Press the Espresso button for 3 seconds. The Espresso button will blink to indicate the current setting (once for 9 mins, twice for 30 mins). Press the Espresso button one time for Auto Off mode after 30 min., one more time for Auto Off mode after 9 min. Finally, to exit press the Lungo button for 3 seconds. If there is irregular blinking, please contact our Customer Service.",
+  },
+  {
+    question: "My machine has little or no coffee flow. What should I do?",
+    answer:
+      "If there is no coffee flow, please check that: The main supply cord is not trapped between the water tank and the machine. The water tank is sufficiently full and correctly positioned. Your machine is turned ON (lights ON). If there is low coffee flow, it means you need to descale your machine.",
+  },
+  {
+    question:
+      "My capsules are not puncturing/my machine may have an air bubble",
+    answer:
+      "Sometimes, your machine can have an air bubble. Air bubbles can block the flow of water through the spout. Air bubbles happen when you run the machine without water in the tank of if you haven’t used your machine in a while. To fix the problem, fill the water tank, eject any capsule that may be in the chamber, close the coffee lever and press the large cup button. That should get water to flow from the coffee outlet.",
+  },
+]);
+
+const activateFirstUseItem = (item: any) => {
+  firstUseItems.value.forEach((i) => {
+    i.isActive = false;
+  });
+  item.isActive = true;
+};
+
+const activateMethodItem = (item: any) => {
+  methodItems.value.forEach((i) => {
+    i.isActive = false;
+  });
+  item.isActive = true;
+};
+
+const activateImageItem = (item: any) => {
+  imageItems.value.forEach((i) => {
+    i.isActive = false;
+  });
+  item.isActive = true;
+};
 </script>
 
 <template lang="pug">

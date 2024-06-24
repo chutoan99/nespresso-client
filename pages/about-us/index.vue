@@ -1,10 +1,11 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
 
-export default defineComponent({
+defineComponent({
   name: "AboutUsPage",
-
-  mounted() {
+});
+ 
+onMounted(() => {
     const links = [...document.querySelectorAll(".tab-menu")];
     links.forEach((tab) => {
       tab.addEventListener("click", () => {
@@ -16,8 +17,7 @@ export default defineComponent({
         }
       });
     });
-  },
-});
+  })
 </script>
 
 <template lang="pug">

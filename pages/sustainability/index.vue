@@ -1,39 +1,38 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
+import { ref, computed, watch, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
-export default defineComponent({
+defineComponent({
   name: "SustainabilityPage",
+})
 
-  data() {
-    return {
-      tabs: [
-        { value: "commitment", label: "COMMITMENT", isActive: true },
-        { value: "bcorp", label: "B CORP", isActive: false },
-        { value: "circularity", label: "CIRCULARITY", isActive: false },
-        { value: "climate", label: "CLIMATE", isActive: false },
-        { value: "community", label: "COMMUNITY", isActive: false },
-      ],
-      activeTab: "",
-    };
-  },
-  computed: {
-    category(): string {
-      const pathSegments = this.$route.path.split("/");
-      return pathSegments[pathSegments.length - 1];
-    },
-    isActive(): (value: string) => boolean {
-      return (value: string) => this.activeTab === value;
-    },
-  },
-  watch: {
-    category(newCategory: string) {
-      this.activeTab = newCategory;
-    },
-  },
-  mounted() {
-    this.activeTab = this.category;
-    console.log(this.category);
-  },
+const tabs = ref([
+  { value: 'commitment', label: 'COMMITMENT', isActive: true },
+  { value: 'bcorp', label: 'B CORP', isActive: false },
+  { value: 'circularity', label: 'CIRCULARITY', isActive: false },
+  { value: 'climate', label: 'CLIMATE', isActive: false },
+  { value: 'commitment', label: 'COMMUNITY', isActive: false },
+]);
+
+const activeTab = ref('');
+const route = useRoute();
+
+const category = computed(() => {
+  const pathSegments = route.path.split('/');
+  return pathSegments[pathSegments.length - 1];
+});
+
+const isActive = computed(() => {
+  return (value: string) => activeTab.value === value;
+});
+
+watch(category, (newCategory) => {
+  activeTab.value = newCategory;
+});
+
+onMounted(() => {
+  activeTab.value = category.value;
+  console.log(category.value);
 });
 </script>
 

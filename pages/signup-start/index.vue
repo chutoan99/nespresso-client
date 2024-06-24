@@ -1,9 +1,10 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
 
-export default defineComponent({
+import { defineComponent } from "vue";
+defineComponent({
   name: "SignUpStartPage",
-});
+})
+
 </script>
 
 <template lang="pug">

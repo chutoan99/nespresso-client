@@ -1,25 +1,21 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
 
-export default defineComponent({
+defineComponent({
   name: "CoffeeDetailPage",
-  data() {
-    return {
-      images: [
-        "/_nuxt/assets/images/product_detail/product-detail-2.png", 
-        "/_nuxt/assets/images/product_detail/product-detail-2.png", 
-        "/_nuxt/assets/images/product_detail/product-detail-2.png", 
-        "/_nuxt/assets/images/product_detail/product-detail-2.png"
-      ],
-      activeIndex: 0,
-    };
-  },
-  methods: {
-    handleImageClick(index: number): void {
-      this.activeIndex = index;
-    },
-  },
 });
+
+const activeIndex = ref(0);
+const images = ref([
+  "/_nuxt/assets/images/product_detail/product-detail-2.png",
+  "/_nuxt/assets/images/product_detail/product-detail-2.png",
+  "/_nuxt/assets/images/product_detail/product-detail-2.png",
+  "/_nuxt/assets/images/product_detail/product-detail-2.png",
+]);
+
+const handleImageClick = (index: number): void => {
+  activeIndex.value = index;
+};
 </script>
 
 <template lang="pug">

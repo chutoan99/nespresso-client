@@ -1,9 +1,9 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
-
-export default defineComponent({
+defineComponent({
   name: "signUpPrivate2Page",
-});
+})
+
 </script>
 
 <template lang="pug">

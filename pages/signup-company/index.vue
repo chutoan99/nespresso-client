@@ -1,102 +1,98 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
 
-export default defineComponent({
+defineComponent({
   name: "signUpCompanyPage",
-  data() {
-    return {
-      privateChecked: false,
-      companyChecked: false,
-      differentChecked: false,
-      differentPrivateChecked: false,
-      differentCompanyChecked: false,
-    };
-  },
-  mounted() {
-    const inputPrivate = document.getElementById("Private") as HTMLInputElement;
-    const inputCompany = document.getElementById("Company") as HTMLInputElement;
-    const form_Private = document.getElementById("form_Private");
-    const form_Company = document.getElementById("form_Company");
+});
 
-    if (inputPrivate) {
-      inputPrivate.addEventListener("click", () => {
-        if (form_Company) form_Company.style.display = "none";
-        if (form_Private) form_Private.style.display = "block";
-        if (inputCompany) inputCompany.checked = false;
-        this.privateChecked = true;
-        this.companyChecked = false;
-      });
-    }
+const privateChecked = ref(false);
+const companyChecked = ref(false);
+const differentChecked = ref(false);
+const differentPrivateChecked = ref(false);
+const differentCompanyChecked = ref(false);
 
-    if (inputCompany) {
-      inputCompany.addEventListener("click", () => {
-        if (form_Company) form_Company.style.display = "block";
-        if (form_Private) form_Private.style.display = "none";
-        if (inputPrivate) inputPrivate.checked = false;
-        this.privateChecked = false;
-        this.companyChecked = true;
-      });
-    }
+onMounted(() => {
+  const inputPrivate = document.getElementById("Private") as HTMLInputElement;
+  const inputCompany = document.getElementById("Company") as HTMLInputElement;
+  const form_Private = document.getElementById("form_Private");
+  const form_Company = document.getElementById("form_Company");
 
-    const inputSame = document.getElementById("Same") as HTMLInputElement;
-    const inputDifferent = document.getElementById(
-      "Different"
-    ) as HTMLInputElement;
-    const form_Different = document.getElementById("form_Different");
+  if (inputPrivate) {
+    inputPrivate.addEventListener("click", () => {
+      if (form_Company) form_Company.style.display = "none";
+      if (form_Private) form_Private.style.display = "block";
+      if (inputCompany) inputCompany.checked = false;
+      privateChecked.value = true;
+      companyChecked.value = false;
+    });
+  }
 
-    if (inputSame) {
-      inputSame.addEventListener("click", () => {
-        if (form_Different) form_Different.style.display = "none";
-        if (inputDifferent) inputDifferent.checked = false;
-        this.differentChecked = false;
-      });
-    }
+  if (inputCompany) {
+    inputCompany.addEventListener("click", () => {
+      if (form_Company) form_Company.style.display = "block";
+      if (form_Private) form_Private.style.display = "none";
+      if (inputPrivate) inputPrivate.checked = false;
+      privateChecked.value = false;
+      companyChecked.value = true;
+    });
+  }
 
-    if (inputDifferent) {
-      inputDifferent.addEventListener("click", () => {
-        if (form_Different) form_Different.style.display = "block";
-        if (inputSame) inputSame.checked = false;
-        this.differentChecked = true;
-      });
-    }
+  const inputSame = document.getElementById("Same") as HTMLInputElement;
+  const inputDifferent = document.getElementById(
+    "Different"
+  ) as HTMLInputElement;
+  const form_Different = document.getElementById("form_Different");
 
-    const input_Different_Company = document.getElementById(
-      "different_Company"
-    ) as HTMLInputElement;
-    const input_Different_Private = document.getElementById(
-      "different_Private"
-    ) as HTMLInputElement;
-    const form_Different_Private = document.getElementById(
-      "form_Different_Private"
-    );
-    const form_Different_Company = document.getElementById(
-      "form_Different_Company"
-    );
+  if (inputSame) {
+    inputSame.addEventListener("click", () => {
+      if (form_Different) form_Different.style.display = "none";
+      if (inputDifferent) inputDifferent.checked = false;
+      differentChecked.value = false;
+    });
+  }
 
-    if (input_Different_Private) {
-      input_Different_Private.addEventListener("click", () => {
-        if (form_Different_Company)
-          form_Different_Company.style.display = "none";
-        if (form_Different_Private)
-          form_Different_Private.style.display = "block";
-        if (input_Different_Company) input_Different_Company.checked = false;
-        this.differentPrivateChecked = true;
-        this.differentCompanyChecked = false;
-      });
-    }
+  if (inputDifferent) {
+    inputDifferent.addEventListener("click", () => {
+      if (form_Different) form_Different.style.display = "block";
+      if (inputSame) inputSame.checked = false;
+      differentChecked.value = true;
+    });
+  }
 
-    if (input_Different_Company) {
-      input_Different_Company.addEventListener("click", () => {
-        if (form_Different_Company)
-          form_Different_Company.style.display = "block";
-        if (form_Different_Private)
-          form_Different_Private.style.display = "none";
-        if (input_Different_Private) input_Different_Private.checked = false;
-        this.differentPrivateChecked = false;
-        this.differentCompanyChecked = true;
-      });
-    }
-  },
+  const input_Different_Company = document.getElementById(
+    "different_Company"
+  ) as HTMLInputElement;
+  const input_Different_Private = document.getElementById(
+    "different_Private"
+  ) as HTMLInputElement;
+  const form_Different_Private = document.getElementById(
+    "form_Different_Private"
+  );
+  const form_Different_Company = document.getElementById(
+    "form_Different_Company"
+  );
+
+  if (input_Different_Private) {
+    input_Different_Private.addEventListener("click", () => {
+      if (form_Different_Company) form_Different_Company.style.display = "none";
+      if (form_Different_Private)
+        form_Different_Private.style.display = "block";
+      if (input_Different_Company) input_Different_Company.checked = false;
+      differentPrivateChecked.value = true;
+      differentCompanyChecked.value = false;
+    });
+  }
+
+  if (input_Different_Company) {
+    input_Different_Company.addEventListener("click", () => {
+      if (form_Different_Company)
+        form_Different_Company.style.display = "block";
+      if (form_Different_Private) form_Different_Private.style.display = "none";
+      if (input_Different_Private) input_Different_Private.checked = false;
+      differentPrivateChecked.value = false;
+      differentCompanyChecked.value = true;
+    });
+  }
 });
 </script>
 

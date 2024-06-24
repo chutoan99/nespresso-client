@@ -1,9 +1,8 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
 
-export default defineComponent({
+defineComponent({
   name: "AccountPage",
-  // Add other properties, methods, etc.
 });
 </script>
 

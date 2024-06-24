@@ -1,17 +1,14 @@
-<script lang="ts">
+<script lang="ts" setup>
+import { defineComponent, ref, onMounted, computed } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { defineComponent } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+
+// Import your data
 import {
   data_capsules,
   data_banner,
@@ -21,69 +18,75 @@ import {
   data_solution,
 } from "@/utils/data_professional";
 
-export default defineComponent({
+// Install Swiper modules
+import SwiperCore from "swiper/core";
+import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
+
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+
+defineComponent({
   name: "ProfessionalPage",
   components: {
     Swiper,
     SwiperSlide,
   },
+});
+// Data using refs
+const dataCapsules = ref(data_capsules);
+const dataBanner = ref(data_banner);
+const dataDiscover = ref(data_discover);
+const dataMachine = ref(data_machine);
+const dataProfessional = ref(data_professional);
+const dataSolution = ref(data_solution);
 
-  data() {
-    return {
-      dataCapsules: data_capsules,
-      dataBanner: data_banner,
-      dataDiscover: data_discover,
-      dataMachine: data_machine,
-      dataProfessional: data_professional,
-      dataSolution: data_solution,
-    };
-  },
-  setup() {
-    const onSwiper = (swiper: any) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
-    return {
-      onSwiper,
-      onSlideChange,
-      modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
-    };
-  },
-  methods: {
-    getSlidesBanner() {
-      if (window?.innerWidth >= 1024) {
-        return 5;
-      } else if (window?.innerWidth >= 480) {
-        return 3;
-      } else {
-        return 1;
-      }
-    },
+// Swiper hooks
+const onSwiper = (swiper: SwiperCore) => {
+  console.log(swiper);
+};
 
-    getSlidesCapsules() {
-      if (window?.innerWidth >= 1024) {
-        return 3;
-      } else if (window?.innerWidth >= 480) {
-        return 2;
-      } else {
-        return 1;
-      }
-    },
-    getSlidesPro() {
-      if (window?.innerWidth >= 1024) {
-        return 3;
-      } else if (window?.innerWidth >= 480) {
-        return 2;
-      } else {
-        return 1;
-      }
-    },
-    shouldShowNavigation() {
-      return window?.innerWidth >= 480;
-    },
-  },
+const onSlideChange = () => {
+  console.log("slide change");
+};
+
+// Computed properties for slides count based on window width
+const getSlidesBanner = computed(() => {
+  if (window.innerWidth >= 1024) {
+    return 5;
+  } else if (window.innerWidth >= 480) {
+    return 3;
+  } else {
+    return 1;
+  }
+});
+
+const getSlidesCapsules = computed(() => {
+  if (window.innerWidth >= 1024) {
+    return 3;
+  } else if (window.innerWidth >= 480) {
+    return 2;
+  } else {
+    return 1;
+  }
+});
+
+const getSlidesPro = computed(() => {
+  if (window.innerWidth >= 1024) {
+    return 3;
+  } else if (window.innerWidth >= 480) {
+    return 2;
+  } else {
+    return 1;
+  }
+});
+
+// Method to determine whether to show navigation based on window width
+const shouldShowNavigation = computed(() => {
+  return window.innerWidth >= 480;
+});
+
+// Lifecycle hook for mounted
+onMounted(() => {
+  // Any additional setup on component mount
 });
 </script>
 

@@ -1,24 +1,25 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
-import Header from "@/containers/header.vue";
-import NavigationComponent from "@/containers/nav.vue";
-import Footer from "@/containers/footer.vue";
+import Footer from "~/components/shared/footer/footer.vue";
+import Header from "~/components/shared/header/header.vue";
+import Navigation from "~/components/shared/navigation/navigation.vue";
 
-export default defineComponent({
-  name: "DefaultLayout",
+
+defineComponent({
   components: {
     Header,
-    NavigationComponent,
+    Navigation,
     Footer,
   },
 });
+
 </script>
 
 <template lang="pug">
 .wrapper
   .wrapper-innner
     Header
-    NavigationComponent
+    Navigation
     router-view
     Footer.
 </template>

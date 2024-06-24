@@ -1,10 +1,6 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
-import Header from "~/containers/header.vue";
-import NavigationComponent from "~/containers/nav.vue";
-import Footer from "~/containers/footer.vue";
-
-export default defineComponent({
+defineComponent({
   name: "PrivacyPolicyPage",
 });
 </script>

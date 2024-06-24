@@ -1,50 +1,50 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
+import { defineComponent, ref } from "vue";
 
-export default defineComponent({
+ defineComponent({
   name: "CoffeeOriginalPage",
-  data() {
-    return {
-      tabs: [
-        { label: "ispirazione italiana", route: "#ispirazione-italiana" },
-        { label: "Espresso & Lungo", route: "#espresso-lungo" },
-        { label: "Master Origins", route: "#master-origins" },
-        { label: "Barista Creations", route: "#barista-creations" },
-      ],
-      selectedIndex: 0,
-      navItems: [
-        { label: "ORIGIN" },
-        { label: "INTENSITY" },
-        { label: "AROMATIC NOTES" },
-        { label: "CUP SIZE" },
-      ],
-      selectedTab: 0,
-    };
-  },
-  methods: {
-    OnShowModal(): void {
-      const modal = document.querySelector(".js-modal") as HTMLElement;
-      const body = document.body as HTMLElement;
-      modal.classList.add("open-modal");
-      body.style.overflow = "hidden";
-    },
-    OnCloseModal(): void {
-      const modal = document.querySelector(".js-modal") as HTMLElement;
-      const body = document.body as HTMLElement;
-      modal.classList.remove("open-modal");
-      modal.classList.remove("popinSlide");
-      body.style.overflow = "";
-    },
-    OnBackModal(): void {
-      const modal = document.querySelector(".js-modal") as HTMLElement;
-      modal.classList.remove("popinSlide");
-    },
-
-    selectTab(index: number): void {
-      this.selectedTab = index;
-    },
-  },
 });
+
+ // Reactive variables
+const tabs = ref([
+  { label: "ispirazione italiana", route: "#ispirazione-italiana" },
+  { label: "Espresso & Lungo", route: "#espresso-lungo" },
+  { label: "Master Origins", route: "#master-origins" },
+  { label: "Barista Creations", route: "#barista-creations" },
+]);
+const selectedTab = ref(0);
+const selectedIndex = ref(0);
+const navItems = [
+  { label: "ORIGIN" },
+  { label: "INTENSITY" },
+  { label: "AROMATIC NOTES" },
+  { label: "CUP SIZE" },
+];
+
+// Methods
+const OnShowModal = () => {
+  const modal = document.querySelector(".js-modal") as HTMLElement;
+  const body = document.body as HTMLElement;
+  modal.classList.add("open-modal");
+  body.style.overflow = "hidden";
+};
+
+const OnCloseModal = () => {
+  const modal = document.querySelector(".js-modal") as HTMLElement;
+  const body = document.body as HTMLElement;
+  modal.classList.remove("open-modal");
+  modal.classList.remove("popinSlide");
+  body.style.overflow = "";
+};
+
+const OnBackModal = () => {
+  const modal = document.querySelector(".js-modal") as HTMLElement;
+  modal.classList.remove("popinSlide");
+};
+
+const selectTab = (index: number) => {
+  selectedTab.value = index;
+};
 </script>
 
 <template lang="pug">

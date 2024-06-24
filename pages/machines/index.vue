@@ -1,37 +1,40 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-import ProductMachineItem from "~/components/product-machine-item.vue";
-import { data_product_machine } from "@/utils/data_produc_machine";
+<script lang="ts" setup>
+import { defineComponent, ref } from "vue";
+import ProductMachineItem from "~/components/product/machine.vue";
+import { data_product_machine } from "~/utils/data_product_machine";
 
-export default defineComponent({
+interface ColorLabel {
+  name: string;
+  color: string;
+  checked: boolean;
+}
+
+defineComponent({
   name: "MachinesPage",
   components: {
     ProductMachineItem,
   },
-  data() {
-    return {
-      data_product_machine: data_product_machine,
-      isExpanded: false,
-      colorLabels: [
-        { name: "red", color: "#f10404", checked: false },
-        { name: "black", color: "#000000", checked: false },
-        { name: "white", color: "#ffffff", checked: false },
-      ],
-    };
-  },
-  methods: {
-    toggleModal() {
-      this.isExpanded = !this.isExpanded;
-      console.log("shfj");
-    },
-
-    OnchangeLabel(label: any) {
-      this.colorLabels.forEach((item) => {
-        item.checked = item === label;
-      });
-    },
-  },
 });
+// Reactive data
+const productmachine = ref(data_product_machine);
+const isExpanded = ref(false);
+const colorLabels: ColorLabel[] = [
+  { name: "red", color: "#f10404", checked: false },
+  { name: "black", color: "#000000", checked: false },
+  { name: "white", color: "#ffffff", checked: false },
+];
+
+// Methods
+const toggleModal = () => {
+  isExpanded.value = !isExpanded.value;
+  console.log("toggle modal");
+};
+
+const onChangeLabel = (label: ColorLabel) => {
+  colorLabels.forEach((item) => {
+    item.checked = item === label;
+  });
+};
 </script>
 
 <template lang="pug">
@@ -76,5 +79,5 @@ main#machines
           | Get your coffee machine for just 1 RON
       button.banner-btn DISCOVER MORE
     .product-list
-      ProductMachineItem(v-bind:data='data_product_machine')
+      ProductMachineItem(v-bind:data='productmachine')
 </template>

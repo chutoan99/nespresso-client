@@ -1,7 +1,6 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-
-import ProductCoffeeItem from "~/components/product-coffe-item.vue";
+<script lang="ts" setup>
+import { defineComponent, ref, onMounted, onUnmounted } from "vue";
+import ProductCoffeeItem from "~/components/product/coffe.vue";
 import {
   dat_category,
   data_barista,
@@ -11,57 +10,65 @@ import {
   data_discovery,
   data_ispirazione,
 } from "@/utils/data_coffee";
-export default defineComponent({
+
+defineComponent({
   name: "CoffeePage",
   components: {
     ProductCoffeeItem,
   },
-  data() {
-    return {
-      isModalOpen: false,
-      isDropdownOpen: false,
-      isSortListOpen: false,
-      dataCategory: dat_category,
-      dataBarista: data_barista,
-      dataEspresso: data_espresso,
-      dataWorld: data_world,
-      dataMaster: data_master,
-      dataDiscovery: data_discovery,
-      dataIspirazione: data_ispirazione,
-    };
-  },
+});
+// Reactive variables
+const isModalOpen = ref(false);
+const isDropdownOpen = ref(false);
+const isSortListOpen = ref(false);
+const dataCategory = ref(dat_category);
+const dataBarista = ref(data_barista);
+const dataEspresso = ref(data_espresso);
+const dataWorld = ref(data_world);
+const dataMaster = ref(data_master);
+const dataDiscovery = ref(data_discovery);
+const dataIspirazione = ref(data_ispirazione);
 
-  mounted() {
-    window.addEventListener("click", this.handleOutsideClick);
-  },
-  methods: {
-    openModal() {
-      this.isModalOpen = true;
-    },
-    closeModal() {
-      this.isModalOpen = false;
-    },
-    toggleDropdown() {
-      this.isDropdownOpen = !this.isDropdownOpen;
-    },
-    toggleSortList() {
-      this.isSortListOpen = !this.isSortListOpen;
-    },
+// Methods
+const openModal = () => {
+  isModalOpen.value = true;
+};
 
-    handleOutsideClick(event: any) {
-      const modal = document.querySelector(".js-modal");
-      const clickDrop = document.querySelector(".filter-container");
-      const dropdownList = document.querySelector(".filter-dropdown__listbox");
+const closeModal = () => {
+  isModalOpen.value = false;
+};
 
-      if (modal && event.target === modal) {
-        this.closeModal();
-      }
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value;
+};
 
-      if (clickDrop && dropdownList && !clickDrop.contains(event.target)) {
-        this.isDropdownOpen = false;
-      }
-    },
-  },
+const toggleSortList = () => {
+  isSortListOpen.value = !isSortListOpen.value;
+};
+
+const handleOutsideClick = (event: Event) => {
+  const modal = document.querySelector(".js-modal") as HTMLElement;
+  const clickDrop = document.querySelector(".filter-container") as HTMLElement;
+  const dropdownList = document.querySelector(
+    ".filter-dropdown__listbox"
+  ) as HTMLElement;
+
+  if (modal && event.target === modal) {
+    closeModal();
+  }
+
+  if (clickDrop && dropdownList && !clickDrop.contains(event.target as Node)) {
+    isDropdownOpen.value = false;
+  }
+};
+
+// Lifecycle hooks
+onMounted(() => {
+  window.addEventListener("click", handleOutsideClick);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("click", handleOutsideClick);
 });
 </script>
 

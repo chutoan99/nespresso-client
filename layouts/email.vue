@@ -1,13 +1,13 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
-import HeaderSimple from "~/containers/header-simple.vue";
+import HeaderSimple from "~/components/shared/header/header-simple.vue";
 
-export default defineComponent({
-  name: "EmailLayout",
+defineComponent({
   components: {
     HeaderSimple,
   },
 });
+
 </script>
 
 <template lang="pug">

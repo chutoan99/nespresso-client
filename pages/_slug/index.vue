@@ -1,18 +1,13 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
 import { data_product } from "@/utils/data_product_404";
-import ProductItem404 from "~/components/product-item-404.vue";
-export default defineComponent({
+import ProductItem404 from "~/components/product/not-found.vue";
+defineComponent({
   name: "NotPoundPage",
   components: {
     ProductItem404,
   },
-  data() {
-    return {
-      dataProduct: data_product,
-    };
-  },
 });
+const dataProduct = ref(data_product)
 </script>
 
 <template lang="pug">

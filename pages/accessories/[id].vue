@@ -1,40 +1,33 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
-
-export default defineComponent({
+defineComponent({
   name: "AccessoriesDetailPage",
-
-  data() {
-    return {
-      isModalOpen: false,
-      dataListCoffee: [
-        {
-          image: "/_nuxt/assets/images/accessories/accessories-10.png",
-          name: "NUDE ESPRESSO CUPS X 2 (80ML)",
-          price: "₫550,000",
-        },
-        {
-          image: "/_nuxt/assets/images/accessories/accessories-10.png",
-          name: "NUDE ESPRESSO CUPS X 2 (80ML)",
-          price: "₫550,000",
-        },
-        {
-          image: "/_nuxt/assets/images/accessories/accessories-10.png",
-          name: "NUDE ESPRESSO CUPS X 2 (80ML)",
-          price: "₫550,000",
-        },
-      ],
-    };
-  },
-  methods: {
-    openModal() {
-      this.isModalOpen = true;
-    },
-    closeModal() {
-      this.isModalOpen = false;
-    },
-  },
 });
+const isModalOpen = ref(false);
+const dataListCoffee = ref([
+  {
+    image: "/_nuxt/assets/images/accessories/accessories-10.png",
+    name: "NUDE ESPRESSO CUPS X 2 (80ML)",
+    price: "₫550,000",
+  },
+  {
+    image: "/_nuxt/assets/images/accessories/accessories-10.png",
+    name: "NUDE ESPRESSO CUPS X 2 (80ML)",
+    price: "₫550,000",
+  },
+  {
+    image: "/_nuxt/assets/images/accessories/accessories-10.png",
+    name: "NUDE ESPRESSO CUPS X 2 (80ML)",
+    price: "₫550,000",
+  },
+]);
+
+const openModal = () => {
+  isModalOpen.value = true;
+};
+const closeModal = () => {
+  isModalOpen.value = false;
+};
 </script>
 
 <template lang="pug">

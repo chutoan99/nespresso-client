@@ -1,75 +1,75 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
-import ProductItem from "~/components/product-item.vue";
+import ProductItem from "~/components/product/item.vue";
 import MoreItem from "~/components/more-item.vue";
 import { data_product } from "@/utils/data_product";
 
-export default defineComponent({
+defineComponent({
   name: "IndexPage",
   components: {
     ProductItem,
     MoreItem,
   },
-  data() {
-    return {
-      data_product: data_product,
-      dataInfo2: [
-        {
-          heading: "Mocha Coffee Recipe featuring Ispirazione Roma",
-          title:
-            "Foamy, milky sweet and lightly chocolatey, a delicious Mocha Latte is ideal for a classic coffee indulgence. Mocha Coffee Recipe featuring Ispirazione Roma",
-          image: "/_nuxt/assets/images/Rectangle_2.png",
-        },
-        {
-          heading: "Cappuccino",
-          title:
-            "Make your morning moment just a little more special with a quick Cappuccino.",
-          image: "/_nuxt/assets/images/Rectangle_1.png",
-        },
-      ],
-      dataInfo: [
-        {
-          heading: "B-Corp Certification",
-          title:
-            "For Nespresso, this certification represents 30 years of continuous sustainability actions",
-          image: "/_nuxt/assets/images/Rectangle_5.png",
-        },
-        {
-          heading: "Think outside the cup",
-          title:
-            "Committed to sustainable farming since 2003-it's time to go further, with a shift to regenerative agriculture",
-          image: "/_nuxt/assets/images/Rectangle_3.png",
-        },
-        {
-          heading: "NESPRESSO RECYCLING PLAN",
-          title:
-            "Discover Nespresso sustainability commitment. We provide a solution for recycling your used aluminum capsules and fulfilling your commitment to protecting the environment.",
-          image: "/_nuxt/assets/images/Rectangle_4.png",
-        },
-      ],
-      dataFeatured: [
-        {
-          heading: "FREE DELIVERY",
-          tiltle: "for orders of min. 100 lei.",
-          des: "for orders of total value of minimum 100 lei. For orders that do not meet the specified criteria, the cost of standard delivery is 15 lei.",
-          image: "/_nuxt/assets/images/Calque_1.png",
-        },
-        {
-          heading: "RECYCLE CAPSULES",
-          tiltle: "via couriers",
-          des: "Together let’s protect the environment with every cup of coffee! Collect your Nespresso used capsules and return them by courier, ticking the option Swap of Used Capsules when you place your online order or bring them upon your next visit to our Nespresso Boutiques.",
-          image: "/_nuxt/assets/images/Layer_1.png",
-        },
-        {
-          heading: "EXCLUSIVE BENEFITS",
-          tiltle: "for Nespresso Members",
-          des: "It’s our shared passion for coffee which brings us together, so why not make the most of it? By becoming a Nespresso member, a world of benefits, rewards, and coffee-inspired discoveries open to you. All these benefits are made for you to enjoy your coffee moments, every day. To make loving coffee even more rewarding.",
-          image: "/_nuxt/assets/images/Frame.png",
-        },
-      ],
-    };
-  },
 });
+
+const dataProduct = ref(data_product);
+const dataInfo2 = ref([
+  {
+    heading: "Mocha Coffee Recipe featuring Ispirazione Roma",
+    title:
+      "Foamy, milky sweet and lightly chocolatey, a delicious Mocha Latte is ideal for a classic coffee indulgence. Mocha Coffee Recipe featuring Ispirazione Roma",
+    image: "/_nuxt/assets/images/Rectangle_2.png",
+  },
+  {
+    heading: "Cappuccino",
+    title:
+      "Make your morning moment just a little more special with a quick Cappuccino.",
+    image: "/_nuxt/assets/images/Rectangle_1.png",
+  },
+]);
+const dataInfo = ref([
+  {
+    heading: "B-Corp Certification",
+    title:
+      "For Nespresso, this certification represents 30 years of continuous sustainability actions",
+    image: "/_nuxt/assets/images/Rectangle_5.png",
+  },
+  {
+    heading: "Think outside the cup",
+    title:
+      "Committed to sustainable farming since 2003-it's time to go further, with a shift to regenerative agriculture",
+    image: "/_nuxt/assets/images/Rectangle_3.png",
+  },
+  {
+    heading: "NESPRESSO RECYCLING PLAN",
+    title:
+      "Discover Nespresso sustainability commitment. We provide a solution for recycling your used aluminum capsules and fulfilling your commitment to protecting the environment.",
+    image: "/_nuxt/assets/images/Rectangle_4.png",
+  },
+]);
+const dataFeatured = ref([
+  {
+    heading: "FREE DELIVERY",
+    tiltle: "for orders of min. 100 lei.",
+    des:
+      "for orders of total value of minimum 100 lei. For orders that do not meet the specified criteria, the cost of standard delivery is 15 lei.",
+    image: "/_nuxt/assets/images/Calque_1.png",
+  },
+  {
+    heading: "RECYCLE CAPSULES",
+    tiltle: "via couriers",
+    des:
+      "Together let’s protect the environment with every cup of coffee! Collect your Nespresso used capsules and return them by courier, ticking the option Swap of Used Capsules when you place your online order or bring them upon your next visit to our Nespresso Boutiques.",
+    image: "/_nuxt/assets/images/Layer_1.png",
+  },
+  {
+    heading: "EXCLUSIVE BENEFITS",
+    tiltle: "for Nespresso Members",
+    des:
+      "It’s our shared passion for coffee which brings us together, so why not make the most of it? By becoming a Nespresso member, a world of benefits, rewards, and coffee-inspired discoveries open to you. All these benefits are made for you to enjoy your coffee moments, every day. To make loving coffee even more rewarding.",
+    image: "/_nuxt/assets/images/Frame.png",
+  },
+]);
 </script>
 
 <template lang="pug">
@@ -118,7 +118,7 @@ main#indexPage
     section#product.product
       h2.product_heading DISCOVER THE NESPRESSO PRODUCTS
       .container.product_list
-        ProductItem(v-bind:data='data_product')
+        ProductItem(v-bind:data='dataProduct')
       .product_seemore
         span SEE MORE
     // MORE INFO
@@ -129,7 +129,7 @@ main#indexPage
     section#product.product
       h2.product_heading Recomment for you you
       .container.product_list
-        ProductItem(v-bind:data='data_product')
+        ProductItem(v-bind:data='dataProduct')
       .product_seemore
         span SEE MORE
 </template>

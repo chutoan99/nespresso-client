@@ -1,21 +1,17 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { defineComponent } from "vue";
 import FaqItem from "~/components/faq-item.vue";
 import { data_top, data_vertuo, data_return } from "@/utils/data_faq";
 
-export default defineComponent({
+defineComponent({
   name: "FaqPage",
   components: {
     FaqItem,
   },
-  data() {
-    return {
-      dataTop: data_top,
-      dataVertuo: data_vertuo,
-      dataReturn: data_return,
-    };
-  },
 });
+const dataTop = ref(data_top)
+const dataVertuo =  ref(data_vertuo)
+const dataReturn = ref(data_return)
 </script>
 
 <template lang="pug">

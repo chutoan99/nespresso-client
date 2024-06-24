@@ -1,61 +1,56 @@
-<script lang="ts">
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { defineComponent } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
-
+<script lang="ts" setup>
+import { defineComponent, ref, onMounted, computed } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 import {
   data_questions,
   data_productRelated,
-} from "@/utils/data_professional_detail";
+} from '@/utils/data_professional_detail';
+import SwiperCore from "swiper/core";
+import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
-export default defineComponent({
-  name: "ProfessionalDetailPage",
+// Install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+
+defineComponent({
+  name: 'ProfessionalDetailPage',
   components: {
     Swiper,
     SwiperSlide,
   },
-  data() {
-    return {
-      dataQuestions: data_questions,
-      dataProductRelated: data_productRelated,
-    };
-  },
+});
 
-  setup() {
-    const onSwiper = (swiper: any) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
-    return {
-      onSwiper,
-      onSlideChange,
-      modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
-    };
-  },
+// Data using refs
+const dataQuestions = ref(data_questions);
+const dataProductRelated = ref(data_productRelated);
 
-  methods: {
-    getSlidesBanner() {
-      if (window?.innerWidth >= 1024) {
-        return 2;
-      } else if (window?.innerWidth >= 480) {
-        return 2;
-      } else {
-        return 1;
-      }
-    },
-  },
+// Swiper hooks
+const onSwiper = (swiper: SwiperCore) => {
+  console.log(swiper);
+};
+
+const onSlideChange = () => {
+  console.log('slide change');
+};
+
+// Computed property for slide count based on window width
+const getSlidesBanner = computed(() => {
+  if (window.innerWidth >= 1024) {
+    return 2;
+  } else if (window.innerWidth >= 480) {
+    return 2;
+  } else {
+    return 1;
+  }
+});
+
+// Lifecycle hook for mounted
+onMounted(() => {
+  // Any additional setup that requires access to the DOM after the component is mounted
 });
 </script>
 

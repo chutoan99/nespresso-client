@@ -1,18 +1,27 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
+<script lang="ts" setup>
+import { defineComponent, onMounted } from "vue";
+defineComponent({
   name: "ServicePage",
-  mounted() {
-    const modal = this.$el.querySelector(".js-modal");
-    const btnClose = this.$el.querySelector(".modal-content-btn");
-    const Listitem = this.$el.querySelectorAll(".service_main-content-border");
-    Listitem.forEach((item: any) => {
-      item.addEventListener("click", () => {
-        modal.classList.add("open-modal");
-      });
-    });
+});
 
+const closeModal = () => {
+  const modal = document.querySelector(".js-modal");
+  if (modal) {
+    modal.classList.remove("open-modal");
+  }
+};
+
+const handleListItemClick = () => {
+  const modal = document.querySelector(".js-modal");
+  if (modal) {
+    modal.classList.add("open-modal");
+  }
+};
+
+const handleModalClose = () => {
+  const modal = document.querySelector(".js-modal");
+  const btnClose = document.querySelector(".modal-content-btn");
+  if (btnClose && modal) {
     btnClose.addEventListener("click", () => {
       modal.classList.remove("open-modal");
     });
@@ -20,13 +29,16 @@ export default defineComponent({
     modal.addEventListener("click", () => {
       modal.classList.remove("open-modal");
     });
-  },
-  methods: {
-    closeModal() {
-      const modal = this.$el.querySelector(".js-modal");
-      modal.classList.remove("open-modal");
-    },
-  },
+  }
+};
+
+onMounted(() => {
+  const Listitem = document.querySelectorAll(".service_main-content-border");
+  Listitem.forEach((item: Element) => {
+    item.addEventListener("click", handleListItemClick);
+  });
+
+  handleModalClose();
 });
 </script>
 

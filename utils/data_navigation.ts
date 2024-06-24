@@ -155,7 +155,7 @@ export const DataNavigation = [
     name: "Store Locator",
     image: "/_nuxt/assets/images/header/location.png",
     image_b: "/_nuxt/assets/images/header/pro_b.png",
-    path: "/store_location",
+    path: "/store-location",
     sub_nav: [],
     sub_nav_2: [],
     background: "/_nuxt/assets/images/image_59.png",
@@ -164,7 +164,7 @@ export const DataNavigation = [
     name: "Contact",
     image: "/_nuxt/assets/images/header/contact.png",
     image_b: "/_nuxt/assets/images/header/contact_b.png",
-    path: "/contact_us",
+    path: "/contact-us",
     sub_nav: [
       {
         name: "FAQs",
