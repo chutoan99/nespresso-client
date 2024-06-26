@@ -3,11 +3,6 @@ import { defineComponent } from "vue";
 definePageMeta({
   layout: 'email'
 });
-
-defineComponent({
-  name: "VerificationPage",
-});
-
 </script>
 
 <template lang="pug">

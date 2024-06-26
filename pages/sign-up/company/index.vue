@@ -1,10 +1,7 @@
 <script lang="ts" setup>
-import { defineComponent, onMounted, ref } from "vue";
+import { onMounted, ref } from "vue";
 definePageMeta({
   layout: 'sign-up'
-});
-defineComponent({
-  name: "signUpCompanyPage",
 });
 
 const privateChecked = ref(false);

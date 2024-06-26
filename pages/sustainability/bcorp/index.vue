@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
-
+definePageMeta({
+  layout: 'sustainability'
+});
 defineComponent({
   name: "SustainabilityBcorp",
 });

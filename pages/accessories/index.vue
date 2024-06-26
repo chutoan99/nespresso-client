@@ -1,24 +1,9 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
+import ProductAccessoriesItem from "./components/accessories-item.vue"
+import { data_Display_Collection, data_IceTray_1, data_IceTray_2, data_Limited, data_Lume_Collection, data_Maintenance, data_Milk_Frothers, data_New_Arrival, data_Nude_Collection, data_Pixie_Collection, data_Reveal_Collection, data_View_Collection_1, data_View_Collection_2 } from "./resources";
 
-import ProductAccessoriesItem from "~/components/product/accessories.vue";
-import {
-  data_Limited,
-  data_New_Arrival,
-  data_Milk_Frothers,
-  data_Lume_Collection,
-  data_Reveal_Collection,
-  data_Maintenance,
-  data_Nude_Collection,
-  data_Pixie_Collection,
-  data_Display_Collection,
-  data_IceTray_1,
-  data_IceTray_2,
-  data_View_Collection_1,
-  data_View_Collection_2,
-} from "@/utils/data_accessories";
 defineComponent({
-  name: "AccessoriesPage",
   components: {
     ProductAccessoriesItem,
   },

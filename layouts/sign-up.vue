@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
-import HeaderCustom from "~/components/shared/header/header-custom.vue";
+import HeaderCustom from "@/shared/header/header-custom.vue";
 
 defineComponent({
   components: {

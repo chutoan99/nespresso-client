@@ -1,13 +1,14 @@
 <script lang="ts" setup>
-import ProductCartItem from "@/components/product/cart.vue";
-import { data_cart } from "@/utils/data_cart";
 import { defineComponent, onMounted, ref } from "vue";
+import { data_cart } from "./resources";
+import ProductCartItem from "./components/cart-item.vue"
 definePageMeta({
   layout: 'sign-up'
 });
 defineComponent({
-  name: "SignUpPrivatePage",
-  components: { ProductCartItem },
+  components: { 
+    ProductCartItem 
+  },
 })
 const privateOption = ref<string>('');
 const inputYesRef = ref<HTMLInputElement | null>(null);

@@ -1,10 +1,3 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-defineComponent({
-  name: "ContactUsPage",
-});
-</script>
-
 <template lang="pug">
 .slideShow
   h2

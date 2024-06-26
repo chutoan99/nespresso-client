@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { defineComponent, ref } from "vue";
-import ProductMachineItem from "~/components/product/machine.vue";
-import { data_product_machine } from "~/utils/data_product_machine";
+import { data_product_machine } from "./resources";
+import ProductMachineItem from "./components/machine-item.vue"
 
 interface ColorLabel {
   name: string;
@@ -10,7 +10,6 @@ interface ColorLabel {
 }
 
 defineComponent({
-  name: "MachinesPage",
   components: {
     ProductMachineItem,
   },

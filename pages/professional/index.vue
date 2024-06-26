@@ -9,23 +9,15 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 // Import your data
-import {
-  data_capsules,
-  data_banner,
-  data_discover,
-  data_machine,
-  data_professional,
-  data_solution,
-} from "@/utils/data_professional";
 
 // Install Swiper modules
 import SwiperCore from "swiper/core";
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { data_banner, data_capsules, data_discover, data_machine, data_professional, data_solution } from "./resources";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 defineComponent({
-  name: "ProfessionalPage",
   components: {
     Swiper,
     SwiperSlide,
@@ -50,9 +42,9 @@ const onSlideChange = () => {
 
 // Computed properties for slides count based on window width
 const getSlidesBanner = computed(() => {
-  if (window.innerWidth >= 1024) {
+  if (window?.innerWidth >= 1024) {
     return 5;
-  } else if (window.innerWidth >= 480) {
+  } else if (window?.innerWidth >= 480) {
     return 3;
   } else {
     return 1;
@@ -60,9 +52,9 @@ const getSlidesBanner = computed(() => {
 });
 
 const getSlidesCapsules = computed(() => {
-  if (window.innerWidth >= 1024) {
+  if (window?.innerWidth >= 1024) {
     return 3;
-  } else if (window.innerWidth >= 480) {
+  } else if (window?.innerWidth >= 480) {
     return 2;
   } else {
     return 1;
@@ -70,9 +62,9 @@ const getSlidesCapsules = computed(() => {
 });
 
 const getSlidesPro = computed(() => {
-  if (window.innerWidth >= 1024) {
+  if (window?.innerWidth >= 1024) {
     return 3;
-  } else if (window.innerWidth >= 480) {
+  } else if (window?.innerWidth >= 480) {
     return 2;
   } else {
     return 1;
@@ -81,7 +73,7 @@ const getSlidesPro = computed(() => {
 
 // Method to determine whether to show navigation based on window width
 const shouldShowNavigation = computed(() => {
-  return window.innerWidth >= 480;
+  return window?.innerWidth >= 480;
 });
 
 // Lifecycle hook for mounted

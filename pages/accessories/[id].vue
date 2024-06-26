@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-import { defineComponent } from "vue";
-defineComponent({
-  name: "AccessoriesDetailPage",
-});
+
 const isModalOpen = ref(false);
 const dataListCoffee = ref([
   {

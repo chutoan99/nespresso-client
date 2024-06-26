@@ -1,9 +1,3 @@
-<script lang="ts" setup>
-defineComponent({
-  name: "NotFound2Page",
-});
-</script>
-
 <template lang="pug">
 main#pageNotFound
   .container.messages

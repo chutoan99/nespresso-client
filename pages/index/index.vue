@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
-import ProductItem from "~/components/product/item.vue";
-import MoreItem from "~/components/more-item.vue";
-import { data_product } from "@/utils/data_product";
+import ProductItem from "./components/product-item.vue";
+import MoreItem from "./components/more-item.vue";
+import { data_product } from "./resources";
 
 defineComponent({
-  name: "IndexPage",
   components: {
     ProductItem,
     MoreItem,

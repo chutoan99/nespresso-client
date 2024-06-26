@@ -1,10 +1,3 @@
-<script lang="ts" setup>
-import { defineComponent } from "vue";
-defineComponent({
-  name: "ResetPasswordPage",
-});
-</script>
-
 <template lang="pug">
 main#reset_pass
   section.forget-pass

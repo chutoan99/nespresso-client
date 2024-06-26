@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { data_product } from "@/utils/data_product_404";
-import ProductItem404 from "~/components/product/not-found.vue";
+import ProductItem404 from "./components/not-found-item.vue";
+import { data_product } from "./resources";
 defineComponent({
-  name: "NotPoundPage",
   components: {
     ProductItem404,
   },

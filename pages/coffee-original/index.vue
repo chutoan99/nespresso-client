@@ -1,9 +1,5 @@
 <script lang="ts" setup>
-import { defineComponent, ref } from "vue";
-
- defineComponent({
-  name: "CoffeeOriginalPage",
-});
+import { ref } from "vue";
 
  // Reactive variables
 const tabs = ref([

@@ -146,7 +146,7 @@ export const DataNavigation = [
     name: "Sustainability & Recycling",
     image: "/_nuxt/assets/images/header/recycle.png",
     image_b: "/_nuxt/assets/images/header/recycle_b.png",
-    path: "/Sustainability",
+    path: "/sustainability/recycling",
     sub_nav: [],
     sub_nav_2: [],
     background: "/_nuxt/assets/images/image_59.png",

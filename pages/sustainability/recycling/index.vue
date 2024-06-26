@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import { defineComponent } from "vue";
-defineComponent({
-  name: "SustainabilityRecyclingPage",
+definePageMeta({
+  layout: 'sustainability'
 });
-
 </script>
 
 <template lang="pug">

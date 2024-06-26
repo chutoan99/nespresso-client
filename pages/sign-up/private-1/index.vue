@@ -1,12 +1,7 @@
 <script lang="ts" setup>
-import { defineComponent } from "vue";
 definePageMeta({
   layout: 'sign-up'
 });
-defineComponent({
-  name: "signUpPrivate1Page",
-})
-
 </script>
 
 <template lang="pug">

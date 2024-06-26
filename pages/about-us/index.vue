@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-import { defineComponent } from "vue";
-
-defineComponent({
-  name: "AboutUsPage",
-});
  
 onMounted(() => {
     const links = [...document.querySelectorAll(".tab-menu")];

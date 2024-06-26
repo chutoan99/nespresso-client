@@ -6,12 +6,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import {
-  data_questions,
-  data_productRelated,
-} from '@/utils/data_professional_detail';
 import SwiperCore from "swiper/core";
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { data_productRelated, data_questions } from './resources';
 
 // Install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
@@ -39,9 +36,9 @@ const onSlideChange = () => {
 
 // Computed property for slide count based on window width
 const getSlidesBanner = computed(() => {
-  if (window.innerWidth >= 1024) {
+  if (window?.innerWidth >= 1024) {
     return 2;
-  } else if (window.innerWidth >= 480) {
+  } else if (window?.innerWidth >= 480) {
     return 2;
   } else {
     return 1;

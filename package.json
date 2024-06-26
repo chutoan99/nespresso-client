@@ -13,13 +13,13 @@
     "nuxt": "^3.12.2",
     "pug": "^3.0.3",
     "pug-plain-loader": "^1.1.0",
-    "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
     "swiper": "^11.1.4",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
-    "@types/swiper": "^6.0.0"
+    "@types/swiper": "^6.0.0",
+    "sass": "^1.77.6"
   }
 }

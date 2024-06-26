@@ -1,10 +1,3 @@
-<script lang="ts" setup>
-import { defineComponent } from "vue";
-defineComponent({
-  name: "MachinesComparePage",
-});
-</script>
-
 <template lang="pug">
 main#machines_compare
   .container

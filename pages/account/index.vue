@@ -1,11 +1,3 @@
-<script lang="ts" setup>
-import { defineComponent } from "vue";
-
-defineComponent({
-  name: "AccountPage",
-});
-</script>
-
 <template lang="pug">
 main#account
   section

@@ -1,11 +1,3 @@
-<script lang="ts" setup>
-import { defineComponent } from "vue";
-defineComponent({
-  name: "StoreLocationPage",
-})
-
-</script>
-
 <template lang="pug">
 main
   section#store_location

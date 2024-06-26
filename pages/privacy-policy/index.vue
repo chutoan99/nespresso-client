@@ -1,10 +1,3 @@
-<script lang="ts" setup>
-import { defineComponent } from "vue";
-defineComponent({
-  name: "PrivacyPolicyPage",
-});
-</script>
-
 <template lang="pug">
 main#policy
   .policy-wrapper

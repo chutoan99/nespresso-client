@@ -15,7 +15,6 @@ import {
 } from "swiper/modules";
 
 defineComponent({
-  name: "BenefitsPage",
   components: {
     Swiper,
     SwiperSlide,
@@ -33,7 +32,7 @@ const onSlideChange = () => {
 };
 
 const getSlidesBanner = () => {
-  const screenWidth = window.innerWidth;
+  const screenWidth = window?.innerWidth;
   if (screenWidth >= 1024) {
     return 8;
   } else if (screenWidth >= 480) {

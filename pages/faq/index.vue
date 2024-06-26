@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
-import FaqItem from "~/components/faq-item.vue";
-import { data_top, data_vertuo, data_return } from "@/utils/data_faq";
+import FaqItem from "./components/faq-item.vue";
+import { data_return, data_top, data_vertuo } from "./resources";
 
 defineComponent({
-  name: "FaqPage",
   components: {
     FaqItem,
   },

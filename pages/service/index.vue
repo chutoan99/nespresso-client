@@ -1,8 +1,5 @@
 <script lang="ts" setup>
 import { defineComponent, onMounted } from "vue";
-defineComponent({
-  name: "ServicePage",
-});
 
 const closeModal = () => {
   const modal = document.querySelector(".js-modal");

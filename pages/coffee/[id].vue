@@ -1,10 +1,4 @@
 <script lang="ts" setup>
-import { defineComponent } from "vue";
-
-defineComponent({
-  name: "CoffeeDetailPage",
-});
-
 const activeIndex = ref(0);
 const images = ref([
   "/_nuxt/assets/images/product_detail/product-detail-2.png",

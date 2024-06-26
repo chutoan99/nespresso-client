@@ -6,8 +6,10 @@ import "swiper/css/scrollbar";
 import SwiperCore from "swiper/core";
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
+definePageMeta({
+  layout: 'sustainability'
+});
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
-
 const onSwiper = (swiper: SwiperCore) => {
   console.log(swiper);
 };
@@ -17,9 +19,9 @@ const onSlideChange = () => {
 };
 
 const getSlidesCommunity = () => {
-  if (window.innerWidth >= 1024) {
+  if (window?.innerWidth >= 1024) {
     return 3;
-  } else if (window.innerWidth >= 480) {
+  } else if (window?.innerWidth >= 480) {
     return 2;
   } else {
     return 1;
@@ -27,7 +29,7 @@ const getSlidesCommunity = () => {
 };
 
 const shouldShowNavigation = () => {
-  return window.innerWidth >= 480;
+  return window?.innerWidth >= 480;
 };
 </script>
 

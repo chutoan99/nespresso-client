@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
-import Footer from "~/components/shared/footer/footer.vue";
-import HeaderCustom from "~/components/shared/header/header-custom.vue";
+import Footer from "@/shared/footer/footer.vue";
+import HeaderCustom from "@/shared/header/header-custom.vue";
 
 defineComponent({
   components: {
@@ -9,6 +9,7 @@ defineComponent({
     HeaderCustom,
   },
 });
+
 const progressSteps = ref([
   {
     id: 1,

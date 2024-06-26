@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { DataNavigation } from "@/utils/data_navigation";
 import { defineComponent } from "vue";
+import { DataNavigation } from "./resources";
 defineComponent({
   name: "Navigation",
 });

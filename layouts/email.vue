@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { defineComponent } from "vue";
-import HeaderSimple from "~/components/shared/header/header-simple.vue";
+import HeaderSimple from "@/shared/header/header-simple.vue";
 
 defineComponent({
   components: {

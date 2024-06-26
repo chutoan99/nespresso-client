@@ -1,11 +1,8 @@
 <script lang="ts" setup>
-import { defineComponent } from "vue";
 definePageMeta({
   layout: 'email'
 });
-defineComponent({
-  name: "OrderConfirmationPage",
-});
+
 </script>
 
 <template lang="pug">

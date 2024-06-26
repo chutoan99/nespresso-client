@@ -1,18 +1,10 @@
 <script lang="ts" setup>
 import { defineComponent, ref, onMounted, onUnmounted } from "vue";
-import ProductCoffeeItem from "~/components/product/coffe.vue";
-import {
-  dat_category,
-  data_barista,
-  data_espresso,
-  data_world,
-  data_master,
-  data_discovery,
-  data_ispirazione,
-} from "@/utils/data_coffee";
+import ProductCoffeeItem from "./components/coffee-item.vue";
+import { dat_category, data_barista, data_discovery, data_espresso, data_ispirazione, data_master, data_world } from "./resources";
+
 
 defineComponent({
-  name: "CoffeePage",
   components: {
     ProductCoffeeItem,
   },

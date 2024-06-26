@@ -1,9 +1,4 @@
 <script lang="ts" setup>
-import { defineComponent } from "vue";
-
-defineComponent({
-  name: "MachinesDetailPage",
-});
 
 const firstUseItems = ref([
   { id: 1, label: "FIRST USE", isActive: true },
