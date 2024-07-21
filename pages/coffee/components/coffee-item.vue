@@ -14,7 +14,7 @@ defineProps<{ data: any }>();
   .product-tag(v-if="product?.tag")
     span.product-tag__name {{ product?.tag }}
   .product-image
-    router-link(:to="`/coffee/${product?.id}`")
+    router-link(:to="'/coffee/' + product?.id")
       img(:src="product?.image" :alt="product?.alt")
   .product-content
     .product-desc

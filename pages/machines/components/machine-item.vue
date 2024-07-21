@@ -12,7 +12,7 @@ defineProps<{ data: any }>();
 .product-item(v-for="item in data", :key="item.id")
   .product-tag
     span.product-tag__name {{ item.label }}
-  router-link.product-image(to="/machines_detail")
+  router-link.product-image(:to="'/machines/' + item.id")
     img(:src="item.image", :alt="item.name")
   p.product-name {{ item.name }}
   p.product-desc {{ item.description }}

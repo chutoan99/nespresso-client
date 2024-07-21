@@ -1,36 +1,36 @@
 export const dat_category = [
   {
-    id: "ispirazione",
+    id: 1,
     image: "/_nuxt/assets/images/product/Ellipse_1.png",
     alt: "Ispirazione Italiana",
     desc: "Ispirazione Italiana",
   },
   {
-    id: "discovery",
+    id: 2,
     image: "/_nuxt/assets/images/product/Ellipse_2.png",
     alt: "Discovery Offer",
     desc: "Discovery Offer",
   },
   {
-    id: "master",
+    id: 3,
     image: "/_nuxt/assets/images/product/Ellipse_3.png",
     alt: "Master Origins",
     desc: "Master Origins",
   },
   {
-    id: "world",
+    id: 4,
     image: "/_nuxt/assets/images/product/Ellipse_4.png",
     alt: "World Exploration",
     desc: "World Exploration",
   },
   {
-    id: "barista",
+    id: 5,
     image: "/_nuxt/assets/images/product/Ellipse_5.png",
     alt: "Barista Creations",
     desc: "Barista Creations",
   },
   {
-    id: "espresso",
+    id: 6,
     image: "/_nuxt/assets/images/product/Ellipse_6.png",
     alt: "Espresso",
     desc: "Espresso",

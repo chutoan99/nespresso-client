@@ -15,5 +15,5 @@ defineComponent({
   main#email_verification
     .wrapper-sm
       HeaderSimple
-        router-view
+      router-view
 </template>

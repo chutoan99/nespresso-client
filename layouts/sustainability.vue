@@ -52,7 +52,7 @@ onMounted(() => {
     Header
     Navigation
     section#tabs
-        .tabs
+      .tabs
         router-link.tabs_heading(
             v-for='tab in tabs' 
             :key='tab.value' 

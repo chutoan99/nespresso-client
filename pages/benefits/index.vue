@@ -54,7 +54,7 @@ const swiperOptions = ref({
 });
 
 // Watch for window resize to adjust slides
-window.addEventListener("resize", () => {
+window?.addEventListener("resize", () => {
   swiperOptions.value.slidesPerView = getSlidesBanner();
 });
 </script>

@@ -75,8 +75,7 @@ onUnmounted(() => {
         .filter-left(@click='openModal')
           img.filter-img(src='/_nuxt/assets/svgs/Filter.svg' alt='')
           p.filter-desc FILTER
-        //
-          <div class="filter-center">
+        //          <div class="filter-center">
           <img class="filter-img" src="/_nuxt/assets/svgs/Filter.svg" alt="" />
           <p class="filter-desc">ORIGINAL</p>
           </div>

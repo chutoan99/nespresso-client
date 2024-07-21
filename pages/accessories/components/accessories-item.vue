@@ -9,9 +9,9 @@ defineProps<{ data: any }>();
 </script>
 
 <template lang="pug">
-.product-item(v-for="item in data", :key="item.name")
+.product-item(v-for="(item, index) in data", :key="index")
   .product-image
-    router-link(to="/accessories_detail")
+    router-link(:to="'/accessories/' + item?.id")
       img(:src="item.image", alt)
     p.product-name {{ item?.name }}
   .product-content

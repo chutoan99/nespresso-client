@@ -22,6 +22,7 @@ const dataIceTray1 = ref(data_IceTray_1);
 const dataIceTray2 = ref(data_IceTray_2);
 const dataViewCollection1 = ref(data_View_Collection_1);
 const dataViewCollection2 = ref(data_View_Collection_2);
+
 const toggleModal = () => {
   isExpanded.value = !isExpanded.value;
 };

@@ -171,4 +171,5 @@ main#coffee-detail
       | intense degree. Leavened with Robusta, the result is a velvety, creamy
       | cup with an extremely thick body and a pleasant, bitter aftertaste. A
       | tribute to the roasting proficiency of the Italian capital of coffee.
+      
 </template>
